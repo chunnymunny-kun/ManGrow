@@ -1,0 +1,28 @@
+<html>
+<head>
+<title>A Simple Leaflet Map</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.1/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.0.1/dist/leaflet.js"></script>
+</head>
+
+<body>
+<h1>A Simple Leaflet Map</h1>
+
+<div id="map" style="width:600px; height: 400px;"></div>
+
+<script>
+var map = L.map("map");
+map.setView([40.7484, -73.9857], 12);
+
+var options = { attribution: "(c) OpenStreetMap Contributors" };
+
+var layer = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', options)
+layer.addTo(map);
+
+var marker = L.marker([40.7484, -73.9857]);
+marker.addTo(map);
+marker.bindPopup("Empire State Building<br/>350 5th Ave, New York, NY 10118");
+marker.openPopup();
+</script>
+</body>
+</html>
