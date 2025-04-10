@@ -1,3 +1,4 @@
+<!--
 <?php
     session_start();
 
@@ -11,6 +12,7 @@
         $accessrole = $_SESSION["accessrole"];
     }
 ?>
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,6 +21,8 @@
     <title>Welcome to ManGrow</title>
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <script type ="text/javascript" src ="app.js" defer></script>
 </head>
 <body>
@@ -34,13 +38,13 @@
             <?php
             if (isset($_SESSION["name"])) {
                 $loggeduser = $_SESSION["name"];
-                echo "<a href='logout.php'>$loggeduser</a>"; // Display the name with a link to profile.php
+                echo "<div class='userbox'><a href='#' id='login' onclick='LoginToggle()'>$loggeduser</a></div>"; // Display the name with a link to profile.php
             } else {
-                echo "<a href='login.php'>Login</a>";
+                echo "<a href='login.php'>Login</a>";    
             }
             ?>
+            </div>
         </nav>
-
     </header>
     <aside id="sidebar" class="close">  
         <ul>
@@ -106,7 +110,7 @@
         </ul>
     </aside>
     <main>
-        <div class="profile-details">
+        <div class="profile-details close" id="profile-details">
             <div class ="details-box">
             <h2><?php 
             if(isset($_SESSION["name"])){
@@ -145,38 +149,135 @@
             <br>
             <section class="s2">
             <div class="one">
-                <h3>Mission</h3>
-                <p>Our purpose exists to bring modern technology integration with environmental stewardship for mangrove conservation. 
+                <p>ManGrow exists to bring modern technology integration with environmental stewardship for mangrove conservation. 
                     We use technology such as GIS-powered mapping with eco-tracking features and promote community engagement to establish sustainable mangrove conservation. 
                     The technology enables mangrove ecosystem protection and strengthens local populations so they actively engage in conservation work.</p>
                 </div>
             </section>
             <section class="s3">
             <div class="two">
-                <h3>Vision</h3>
-                <p>Digital innovation will guide our path toward protecting and promoting a healthy state of mangrove forests in forthcoming years. 
-                    Modern technology and collaborative efforts will lead us to develop an eco-oriented community focused on resource conservation. 
-                    The coastal resources need to be sustainably preserved through proper utilization for upcoming generations.
-                </p>
+                <div class="medium-box">
+
+            
+                </div>
+                <div class="small-box">
+                    <h3>Reference Links</h3>
+                    <a href="#">https://sambrix.com</a>
+                    <a href="#">https://sambrix.com</a>
+                    <a href="#">https://sambrix.com</a>
+                    <a href="#">https://sambrix.com</a>
+                    <a href="#">https://sambrix.com</a>
+                    <a href="#">https://sambrix.com</a>
+                    <a href="#">https://sambrix.com</a>
+                    <a href="#">https://sambrix.com</a>
                 </div>
             </section>
             <section class="s4">
             <div class="three">
-                <h3>About ManGrow</h3>
-                <p>The ManGrow system brings together conservation capabilities that integrate Geographic Information System (GIS) with 2D mapping and QR-based tree tracking features. 
-                    and QR-based tree tracking. The organization enables communities officials and environmental organizations to protect mangroves through its support system. 
-                    Through the system users track tree planting activities and illegal deforestation activities while participating in tree plantation programs.</p>
+                <div  class="three-header"><h1>Expect the latest from our community hub</h1></div>
+                <div class="programs-box">
+                    <!-- bukas ka sakin haup ka -->
+                    <div class="programs-details">
+                        <div class="programs-img"><img src="images/mangrove.webp" alt="Mangrove"></div>
+                        <div class="programs-desc">
+                            <h4>Program 1</h4>
+                            <div class="programs-tags">
+                            <h5>News</h5><h5>Article</h5>
+                            </div>
+                            <p>ManGrow exists to bring modern technology integration with environmental stewardship for mangrove conservation. overflow: hidden; overflow: hidden; overflow: hidden;</p>
+                            <a href="#">Learn More >></a>
+                        </div>
+                    </div>
+                    <div class="programs-details">
+                    <div class="programs-img"><img src="images/mangrove.webp" alt="Mangrove"></div>
+                        <div class="programs-desc">
+                            <h4>Program 1</h4>
+                            <div class="programs-tags">
+                            <h5>News</h5><h5>Article</h5>
+                            </div>
+                            <p>ManGrow exists to bring modern technology integration with environmental stewardship for mangrove conservation. overflow: hidden; overflow: hidden; overflow: hidden;</p>
+                            <a href="#">Learn More >></a>
+                        </div>
+                    </div>
+                    <div class="programs-details">
+                    <div class="programs-img"><img src="images/mangrove.webp" alt="Mangrove"></div>
+                        <div class="programs-desc">
+                            <h4>Program 1</h4>
+                            <div class="programs-tags">
+                            <h5>News</h5><h5>Article</h5>
+                            </div>
+                            <p>ManGrow exists to bring modern technology integration with environmental stewardship for mangrove conservation. overflow: hidden; overflow: hidden; overflow: hidden;</p>
+                            <a href="#">Learn More >></a>
+                        </div>
+                    </div>
+                    <div class="programs-details">
+                    <div class="programs-img"><img src="images/mangrove.webp" alt="Mangrove"></div>
+                        <div class="programs-desc">
+                            <h4>Program 1</h4>
+                            <div class="programs-tags">
+                            <h5>News</h5><h5>Article</h5>
+                            </div>
+                            <p>ManGrow exists to bring modern technology integration with environmental stewardship for mangrove conservation. overflow: hidden; overflow: hidden; overflow: hidden;</p>
+                            <a href="#">Learn More >></a>
+                        </div>
+                    </div>
+                    <div class="programs-details">
+                    <div class="programs-img"><img src="images/mangrove.webp" alt="Mangrove"></div>
+                        <div class="programs-desc">
+                            <h4>Program 1</h4>
+                            <div class="programs-tags">
+                            <h5>News</h5><h5>Article</h5>
+                            </div>
+                            <p>ManGrow exists to bring modern technology integration with environmental stewardship for mangrove conservation. overflow: hidden; overflow: hidden; overflow: hidden;</p>
+                            <a href="#">Learn More >></a>
+                        </div>
+                    </div>
+                    <div class="programs-details">
+                    <div class="programs-img"><img src="images/mangrove.webp" alt="Mangrove"></div>
+                        <div class="programs-desc">
+                            <h4>Program 1</h4>
+                            <div class="programs-tags">
+                            <h5>News</h5><h5>Article</h5>
+                            </div>
+                            <p>ManGrow exists to bring modern technology integration with environmental stewardship for mangrove conservation. overflow: hidden; overflow: hidden; overflow: hidden;</p>
+                            <a href="#">Learn More >></a>
+                        </div>  
+                </div>
+            </div>
+            <div class="view-more">
+                    <button type="button" class="view-more-btn" onclick="window.location.href='project.php';">View More <span><i class="fas fa-angle-double-right"></i></span></button>
                 </div>
             </section>
             <section class="s5">
             <div class="four">
-                <h3>About Us</h3>
-                <p>Our team aspires to connect technology and the mangrove environment closer together with the help of the community's efforts. 
-                    We focus on streamlining conservation initiatives, mangrove monitoring and compliance efforts with our eco-tracking and 2D 
-                    mapping as our personalized approach in keeping sure of a well-maintained mangrove environment.</p>
-                </div>
+            </div>
             </section>
         </div>
     </main>
+    <footer>
+                <div id="right-footer">
+                    <h3>Follow us on</h3>
+                    <div id="social-media-footer">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <i class="fab fa-facebook"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <p>This website is developed by ManGrow. All Rights Reserved.</p>
+                </div>
+            </footer>
 </body>
 </html>

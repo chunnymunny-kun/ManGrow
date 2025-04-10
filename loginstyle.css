@@ -87,6 +87,7 @@ body{
 }
 
 .login-container .logo{
+    color:azure;
     margin-top:75px;
     padding:5px 25px 5px 75px;
     border-top-right-radius: 30px;
@@ -97,6 +98,7 @@ body{
 }
 
 .content-mesg{
+    color:azure;
     padding: 2rem 75px 2rem 75px;
     background: rgba(0,0,0,0.4);
     margin-bottom: 75px;
@@ -190,6 +192,14 @@ body{
 .form-box h2{
     font-size: 32px;
     text-align: center;
+}
+
+.form-box h5{
+    margin:5px 0;
+    width: 340px;
+    font-size: 15px;
+    text-align: center;
+    margin: 10px 0 20px;
 }
 
 .form-box .input-box{

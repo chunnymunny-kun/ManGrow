@@ -1,7 +1,11 @@
 const ToggleButton = document.getElementById('toggle-btn')
 const sidebar = document.getElementById('sidebar')
+const loginbtn = document.getElementById('login')
+const profileDetails = document.getElementById('profile-details');
 
-
+function LoginToggle(){
+    profileDetails.classList.toggle('close')
+}
 
 function SidebarToggle(){
     sidebar.classList.toggle('close')

@@ -1,4 +1,5 @@
 <?php
+session_start();
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (isset($_POST["loginemail"])) {
             // Login form submission
@@ -6,6 +7,20 @@
             $password = $_POST["loginpassword"];
             require_once 'loginprocess.php';
             $result = loginme($email,$password);
+        }
+        if (isset($_POST["firstname"])) {
+            $firstname = $_POST['firstname'];
+            $lastname = $_POST['lastname'];
+            $email = $_POST['email'];
+        
+            // Store data in session variables
+            $_SESSION['firstname'] = $firstname;
+            $_SESSION['lastname'] = $lastname;
+            $_SESSION['email'] = $email;
+        
+            // Redirect to the verification page
+            header("Location: verification.php");
+            exit();
         }
     }
     ?>
@@ -29,7 +44,7 @@
             <div class="content-mesg">
                 <h2>Welcome!<br><span>Let's plant our future together.</span></h2>
 
-                <p>To protect our homeland is our knight's duty.</p>
+                <p>Forsee the growth of our land's most precious natural defense.</p>
 
                 <div class="socials">
                     <a href="https://www.facebook.com/sambrix.perello.1"><i class='bx bxl-facebook-square' id="fb"></i></a>
@@ -66,40 +81,26 @@
             <div class="form-box register" id="register-form">
                 <form action="" method="post" autocomplete="off">
                     <h2>Sign Up</h2>
+                    <h5>Let's verify your identity if you are locally registered to us.</h5>
                     <div class="input-box">
                         <span class="icon"><i class='bx bxs-user' ></i></span>
-                        <input type="text" name="fullname" required>
-                        <label>Full Name</label>
+                        <input type="text" name="firstname" required>
+                        <label>First Name</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon"><i class='bx bxs-user' ></i></span>
+                        <input type="text" name="lastname" required>
+                        <label>Last Name</label>
                     </div>
                     <div class="input-box">
                         <span class="icon"><i class='bx bxs-envelope' ></i></span>
                         <input type="text" name="email" required>
-                        <label>Email</label>
-                    </div>
-                    <div class="input-box">
-                        <span class="icon"><i class='bx bxs-lock-alt' ></i></span>
-                        <input id="regpassword" name="password" type="password" required>
-                        <label>Password</label>
-                        <img src="images/show.png" id="regpeye" class="hide">
-                    </div>
-                    <div class="input-box">
-                        <span class="icon"><i class='bx bxs-lock-alt' ></i></span>
-                        <input id="regconfirmpassword" name="confirmpassword" type="password" required>
-                        <label>Confirm Password</label>
-                        <img src="images/show.png" id="regcpeye" class="hide">
-                    </div>
-                    <div class="input-box">
-                        <span class="icon"><i class='bx bxs-key' ></i></span>
-                        <select name ="accessrole" required>
-                            <option value="Citizen">Citizen</option>
-                            <option value="Barangay Official">Barangay Official</option>
-                        </select>
-                        <label>Access Role</label>
+                        <label>Personal Email</label>
                     </div>
                     <div class="remember-forgot">
                         <label><input type="checkbox"> I agree to the terms and conditions</label>
                     </div>
-                    <button type="submit" name="regsubmit" class="registerbtn">Sign Up</button>
+                    <button type="submit" name="regsubmit" class="registerbtn">Verify</button>
                     <div class ="login-register">
                         <p>Already have an account? <a href="#" class="login-link">Sign in</a> </p>
                     </div>
@@ -107,19 +108,14 @@
             </div>
         </div>
     </div>
+
     <script src="loginapp.js" type="text/Javascript"></script>
-    <?php
-    if (isset($_POST["fullname"])) {
-        $button = $_POST["regsubmit"];
-        // Registration form submission
-        $fullname = $_POST["fullname"];
+</body>
+</html>
+<!--$fullname = $_POST["fullname"];
         $email = $_POST["email"];
         $password = $_POST["password"];
         $confirmpassword = $_POST["confirmpassword"];
         $accessrole = $_POST["accessrole"];
         require_once 'registerprocess.php';
-        registerme($fullname,$email,$password,$confirmpassword,$accessrole);
-    }
-    ?>
-</body>
-</html>
+        registerme($fullname,$email,$password,$confirmpassword,$accessrole); */-->

@@ -6,7 +6,7 @@ function loginme($email, $password)
     require 'database.php';
 
     // Prepared statement to prevent SQL injection
-    $stmt = mysqli_prepare($connection, "SELECT * FROM accountstbl WHERE email = ?");
+    $stmt = mysqli_prepare($connection, "SELECT * FROM adminaccountstbl WHERE email = ?");
     mysqli_stmt_bind_param($stmt, "s", $email); // "s" indicates a string parameter
     mysqli_stmt_execute($stmt);
     $result = mysqli_stmt_get_result($stmt);
@@ -21,14 +21,14 @@ function loginme($email, $password)
             $_SESSION["email"] = $row["email"];
             $_SESSION["accessrole"] = $row["accessrole"];
 
-            header("Location: index.php");
+            header("Location: adminpage.php");
             exit();
         } else {
             echo "<script>alert('Incorrect username or password!');</script>";
             return;
         }
     } else {
-        echo "<script>alert('This user is not registered.');</script>";
+        echo "<script>alert('This user is not an admin.');</script>";
         return;
     }
     mysqli_stmt_close($stmt); // close the statement.
