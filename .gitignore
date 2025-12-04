@@ -1,0 +1,24 @@
+# Composer dependencies and installed libraries
+/vendor/
+
+# PHP environment files
+.env
+.env.local
+
+# Logs and debug files
+storage/*.log
+*.log
+
+# VS Code settings
+.vscode/
+
+# Ignore all Markdown files
+*.md
+
+# Ignore nested project folder (old code)
+/project/
+
+# Exclude all large archives/compressed files
+*.zip
+*.rar
+*.7z

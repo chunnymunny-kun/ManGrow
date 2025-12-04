@@ -1,0 +1,1135 @@
+{
+    "features": [
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.5464263920804199869962758384644985198974609375,
+                    14.741874833392554222655235207639634609222412109375
+                ]
+            },
+            "properties": {
+                "mangrove_id": "1747134636-8db2",
+                "area_no": "ABU-01",
+                "mangrove_type": "Rhizophora apiculata",
+                "status": "Healthy",
+                "date_added": "2025-05-13 13:10:36",
+                "date_updated": "2025-05-13 20:46:54"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.548872636488596299386699683964252471923828125,
+                    14.73995013910263196521555073559284210205078125
+                ]
+            },
+            "properties": {
+                "mangrove_id": "1747136802-b99d",
+                "area_no": "ABU-02",
+                "mangrove_type": "Rhizophora mucronata",
+                "status": "Healthy",
+                "date_added": "2025-05-13 13:46:42",
+                "date_updated": "2025-05-13 20:47:06"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.548758306450366717399447225034236907958984375,
+                    14.739916417892008126955261104740202426910400390625
+                ]
+            },
+            "properties": {
+                "mangrove_id": "1747136888-f1d0",
+                "area_no": "ABU-02",
+                "mangrove_type": "Rhizophora apiculata",
+                "status": "Growing",
+                "date_added": "2025-05-13 13:48:08",
+                "date_updated": "2025-05-13 20:55:56"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.54895695455485338243306614458560943603515625,
+                    14.740034442106317413845317787490785121917724609375
+                ]
+            },
+            "properties": {
+                "mangrove_id": "1747137973-56ba",
+                "area_no": "ABU-02",
+                "mangrove_type": "Rhizophora apiculata",
+                "status": "Healthy",
+                "date_added": "2025-05-13 14:06:13",
+                "date_updated": "2025-05-13 20:47:15"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.548834519406483423153986223042011260986328125,
+                    14.73936650202819009791710413992404937744140625
+                ]
+            },
+            "properties": {
+                "mangrove_id": "1747138474-9ddd",
+                "area_no": "ABU-02",
+                "mangrove_type": "Rhizophora apiculata",
+                "status": "Healthy",
+                "date_added": "2025-05-13 14:14:34",
+                "date_updated": "2025-05-13 20:54:51"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.5484928581856109985892544500529766082763671875,
+                    14.73924847745189481429406441748142242431640625
+                ]
+            },
+            "properties": {
+                "mangrove_id": "1747139547-8464",
+                "area_no": "ABU-02",
+                "mangrove_type": "Sonneratia alba",
+                "status": "Growing",
+                "date_added": "2025-05-13 14:32:27",
+                "date_updated": "2025-05-13 20:55:05"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.5485367696330882836264208890497684478759765625,
+                    14.73847158880965935168205760419368743896484375
+                ]
+            },
+            "properties": {
+                "mangrove_id": "1747146879-b9b6",
+                "area_no": "ABU-02",
+                "mangrove_type": "Rhizophora mucronata",
+                "status": "Healthy",
+                "date_added": "2025-05-13 16:34:39",
+                "date_updated": "2025-05-13 20:47:34"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.548414840758738364456803537905216217041015625,
+                    14.7381447500218296653429206344299018383026123046875
+                ]
+            },
+            "properties": {
+                "mangrove_id": "1747148207-5a29",
+                "area_no": "ABU-02",
+                "mangrove_type": "Avicennia marina",
+                "status": "Healthy",
+                "date_added": "2025-05-13 16:56:47",
+                "date_updated": "2025-05-13 20:47:41"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.5483785251986574849070166237652301788330078125,
+                    14.738087682881609197238503838889300823211669921875
+                ]
+            },
+            "properties": {
+                "mangrove_id": "1747148231-b962",
+                "area_no": "ABU-01",
+                "mangrove_type": "Rhizophora apiculata",
+                "status": "Healthy",
+                "date_added": "2025-05-13 16:57:11",
+                "date_updated": "2025-05-13 20:47:46"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.5483793508426941798461484722793102264404296875,
+                    14.738020239878419914703044923953711986541748046875
+                ]
+            },
+            "properties": {
+                "mangrove_id": "1747148237-8563",
+                "area_no": "ABU-02",
+                "mangrove_type": "Rhizophora apiculata",
+                "status": "Healthy",
+                "date_added": "2025-05-13 16:57:17",
+                "date_updated": "2025-05-13 20:47:49"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.5474590523802334018910187296569347381591796875,
+                    14.73672066100818511813486111350357532501220703125
+                ]
+            },
+            "properties": {
+                "mangrove_id": "1747148300-187e",
+                "area_no": "ABU-03",
+                "mangrove_type": "Rhizophora apiculata",
+                "status": "Healthy",
+                "date_added": "2025-05-13 16:58:20",
+                "date_updated": "2025-05-13 20:47:56"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.547512181515941165343974716961383819580078125,
+                    14.7365442704641136373311383067630231380462646484375
+                ]
+            },
+            "properties": {
+                "mangrove_id": "1747148327-9bde",
+                "area_no": "ABU-03",
+                "mangrove_type": "Rhizophora apiculata",
+                "status": "Growing",
+                "date_added": "2025-05-13 16:58:47",
+                "date_updated": "2025-05-13 16:59:08"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.547633599428507977791014127433300018310546875,
+                    14.73593987236963442910564481280744075775146484375
+                ]
+            },
+            "properties": {
+                "mangrove_id": "1747148387-c5bf",
+                "area_no": "ABU-03",
+                "mangrove_type": "Avicennia marina",
+                "status": "Growing",
+                "date_added": "2025-05-13 16:59:47"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.5476248372432763744654948823153972625732421875,
+                    14.7354729542386753138316635158844292163848876953125
+                ]
+            },
+            "properties": {
+                "mangrove_id": "1747150782-6768",
+                "area_no": "ABU-03",
+                "mangrove_type": "Rhizophora apiculata",
+                "status": "Growing",
+                "date_added": "2025-05-13 17:39:42",
+                "date_updated": "2025-05-13 17:40:15"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.5475282659238729365824838168919086456298828125,
+                    14.735524834080425904403455206193029880523681640625
+                ]
+            },
+            "properties": {
+                "mangrove_id": "1747150826-38b3",
+                "area_no": "ABU-03",
+                "mangrove_type": "Rhizophora mucronata",
+                "status": "Healthy",
+                "date_added": "2025-05-13 17:40:26",
+                "date_updated": "2025-05-13 20:48:03"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.547346567679170448172953911125659942626953125,
+                    14.7354081044190952098915659007616341114044189453125
+                ]
+            },
+            "properties": {
+                "mangrove_id": "1747150867-5a0f",
+                "area_no": "ABU-03",
+                "mangrove_type": "Rhizophora apiculata",
+                "status": "Healthy",
+                "date_added": "2025-05-13 17:41:07",
+                "date_updated": "2025-05-13 20:48:08"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.547300435423125009037903510034084320068359375,
+                    14.7338309508638101164024192257784307003021240234375
+                ]
+            },
+            "properties": {
+                "mangrove_id": "1747152891-39c3",
+                "area_no": "ABU-03",
+                "mangrove_type": "Sonneratia alba",
+                "status": "Growing",
+                "date_added": "2025-05-13 18:14:51"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.5470001390822432085769833065569400787353515625,
+                    14.7327336810471667405408879858441650867462158203125
+                ]
+            },
+            "properties": {
+                "mangrove_id": "1747153901-d060",
+                "area_no": "ABU-03",
+                "mangrove_type": "Rhizophora mucronata",
+                "status": "Healthy",
+                "date_added": "2025-05-13 18:31:41",
+                "date_updated": "2025-05-13 20:48:18"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.547126598035589495339081622660160064697265625,
+                    14.732629920022031200232959236018359661102294921875
+                ]
+            },
+            "properties": {
+                "mangrove_id": "1747153961-b66b",
+                "area_no": "ABU-03",
+                "mangrove_type": "Avicennia marina",
+                "status": "Healthy",
+                "date_added": "2025-05-13 18:32:41",
+                "date_updated": "2025-05-13 20:48:24"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.5467724167015290959170670248568058013916015625,
+                    14.7324275858808970696145479450933635234832763671875
+                ]
+            },
+            "properties": {
+                "mangrove_id": "1747154001-87c8",
+                "area_no": "ABU-03",
+                "mangrove_type": "Avicennia marina",
+                "status": "Healthy",
+                "date_added": "2025-05-13 18:33:21",
+                "date_updated": "2025-05-13 20:48:28"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.546862188139130012132227420806884765625,
+                    14.73226027096841761476753163151443004608154296875
+                ]
+            },
+            "properties": {
+                "mangrove_id": "1747155524-52fe",
+                "area_no": "ABU-03",
+                "mangrove_type": "Rhizophora mucronata",
+                "status": "Healthy",
+                "date_added": "2025-05-13 18:58:44",
+                "date_updated": "2025-05-13 20:48:31"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.5468460319788590595635469071567058563232421875,
+                    14.7312382204967082799385025282390415668487548828125
+                ]
+            },
+            "properties": {
+                "mangrove_id": "1747155613-8d4b",
+                "area_no": "ABU-03",
+                "mangrove_type": "Sonneratia alba",
+                "status": "Growing",
+                "date_added": "2025-05-13 19:00:13"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.5420992419281418506216141395270824432373046875,
+                    14.7352239308262884520672741928137838840484619140625
+                ]
+            },
+            "properties": {
+                "mangrove_id": "1747155763-fd08",
+                "area_no": "ABU-05",
+                "mangrove_type": "Rhizophora apiculata",
+                "status": "Natural",
+                "date_added": "2025-05-13 19:02:43"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.5465856351509756905215908773243427276611328125,
+                    14.72960007630291556779411621391773223876953125
+                ]
+            },
+            "properties": {
+                "mangrove_id": "1747155870-f6c7",
+                "area_no": "ABU-03",
+                "mangrove_type": "Avicennia marina",
+                "status": "Damaged",
+                "date_added": "2025-05-13 19:04:30"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.5465468890067342044858378358185291290283203125,
+                    14.729305650031523811094302800484001636505126953125
+                ]
+            },
+            "properties": {
+                "mangrove_id": "1747155936-77a2",
+                "area_no": "ABU-03",
+                "mangrove_type": "Sonneratia alba",
+                "status": "Growing",
+                "date_added": "2025-05-13 19:05:36"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.546744103613178822342888452112674713134765625,
+                    14.729306947064433330751853645779192447662353515625
+                ]
+            },
+            "properties": {
+                "mangrove_id": "1747155967-524c",
+                "area_no": "ABU-03",
+                "mangrove_type": "Rhizophora mucronata",
+                "status": "Healthy",
+                "date_added": "2025-05-13 19:06:07",
+                "date_updated": "2025-05-13 20:48:41"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.5467548363808845124367508105933666229248046875,
+                    14.7291396297559895600670643034391105175018310546875
+                ]
+            },
+            "properties": {
+                "mangrove_id": "1747155984-1d3b",
+                "area_no": "ABU-03",
+                "mangrove_type": "Rhizophora apiculata",
+                "status": "Growing",
+                "date_added": "2025-05-13 19:06:24"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.54663945912813005634234286844730377197265625,
+                    14.728707717040432356725432327948510646820068359375
+                ]
+            },
+            "properties": {
+                "mangrove_id": "1747156016-d475",
+                "area_no": "ABU-03",
+                "mangrove_type": "Sonneratia alba",
+                "status": "Growing",
+                "date_added": "2025-05-13 19:06:56"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.54663390311833381929318420588970184326171875,
+                    14.727753096110173913757535046897828578948974609375
+                ]
+            },
+            "properties": {
+                "mangrove_id": "1747156082-2a4e",
+                "area_no": "ABU-06",
+                "mangrove_type": "Rhizophora apiculata",
+                "status": "Healthy",
+                "date_added": "2025-05-13 19:08:02",
+                "date_updated": "2025-05-13 20:48:47"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.5466392695021653480580425821244716644287109375,
+                    14.7273224776917519562857705750502645969390869140625
+                ]
+            },
+            "properties": {
+                "mangrove_id": "1747156103-8127",
+                "area_no": "ABU-06",
+                "mangrove_type": "Rhizophora mucronata",
+                "status": "Growing",
+                "date_added": "2025-05-13 19:08:23"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.5469448270556114266582881100475788116455078125,
+                    14.7252471962768982649549798225052654743194580078125
+                ]
+            },
+            "properties": {
+                "mangrove_id": "1747157642-18d8",
+                "area_no": "ABU-07",
+                "mangrove_type": "Rhizophora mucronata",
+                "status": "Healthy",
+                "date_added": "2025-05-13 19:34:02",
+                "date_updated": "2025-05-13 20:48:53"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.5469930281850992059844429604709148406982421875,
+                    14.725003349413587017124882549978792667388916015625
+                ]
+            },
+            "properties": {
+                "mangrove_id": "1747157697-4269",
+                "area_no": "ABU-07",
+                "mangrove_type": "Rhizophora apiculata",
+                "status": "Growing",
+                "date_added": "2025-05-13 19:34:57",
+                "date_updated": "2025-05-13 20:48:56"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.547073915556694601036724634468555450439453125,
+                    14.7250228052903633368941882508806884288787841796875
+                ]
+            },
+            "properties": {
+                "mangrove_id": "1747157723-a761",
+                "area_no": "ABU-07",
+                "mangrove_type": "Rhizophora apiculata",
+                "status": "Growing",
+                "date_added": "2025-05-13 19:35:23",
+                "date_updated": "2025-05-13 20:48:59"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.5473475593593235544176422990858554840087890625,
+                    14.7242419747393906703791799372993409633636474609375
+                ]
+            },
+            "properties": {
+                "mangrove_id": "1747157796-c6cb",
+                "area_no": "ABU-07",
+                "mangrove_type": "Avicennia marina",
+                "status": "Healthy",
+                "date_added": "2025-05-13 19:36:36",
+                "date_updated": "2025-05-13 20:49:03"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.5473945152179879869436263106763362884521484375,
+                    14.72423159823483018726619775407016277313232421875
+                ]
+            },
+            "properties": {
+                "mangrove_id": "1747157805-fcf3",
+                "area_no": "ABU-07",
+                "mangrove_type": "Avicennia marina",
+                "status": "Growing",
+                "date_added": "2025-05-13 19:36:45",
+                "date_updated": "2025-05-13 20:49:06"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.547486918320402082827058620750904083251953125,
+                    14.72351950942988452197823789902031421661376953125
+                ]
+            },
+            "properties": {
+                "mangrove_id": "1747157836-cb11",
+                "area_no": "ABU-07",
+                "mangrove_type": "Rhizophora apiculata",
+                "status": "Healthy",
+                "date_added": "2025-05-13 19:37:16",
+                "date_updated": "2025-05-13 20:49:10"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.547794097523365053348243236541748046875,
+                    14.716006766008309369908602093346416950225830078125
+                ]
+            },
+            "properties": {
+                "mangrove_id": "1747159404-e336",
+                "area_no": "ABU-08",
+                "mangrove_type": "Rhizophora mucronata",
+                "status": "Healthy",
+                "date_added": "2025-05-13 20:03:24",
+                "date_updated": "2025-05-13 20:49:16"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.5482528338976777604329981841146945953369140625,
+                    14.7140195813459850882054524845443665981292724609375
+                ]
+            },
+            "properties": {
+                "mangrove_id": "1747159649-0dd2",
+                "area_no": "ABU-08",
+                "mangrove_type": "Rhizophora apiculata",
+                "status": "Growing",
+                "date_added": "2025-05-13 20:07:29"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.5503734371878863385063596069812774658203125,
+                    14.710159306671950929512604488991200923919677734375
+                ]
+            },
+            "properties": {
+                "mangrove_id": "1747159817-c0e5",
+                "area_no": "ABU-09",
+                "mangrove_type": "Rhizophora apiculata",
+                "status": "Growing",
+                "date_added": "2025-05-13 20:10:17"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.5508945091582546638164785690605640411376953125,
+                    14.709116398168848860450452775694429874420166015625
+                ]
+            },
+            "properties": {
+                "mangrove_id": "1747161119-062b",
+                "area_no": "ABU-09",
+                "mangrove_type": "Rhizophora mucronata",
+                "status": "Growing",
+                "date_added": "2025-05-13 20:31:59"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.55087799718467067577876150608062744140625,
+                    14.7087843267537010660817031748592853546142578125
+                ]
+            },
+            "properties": {
+                "mangrove_id": "1747161226-ec7e",
+                "area_no": "ABU-09",
+                "mangrove_type": "Sonneratia alba",
+                "status": "Growing",
+                "date_added": "2025-05-13 20:33:46"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.55173661860050060568028129637241363525390625,
+                    14.7074456587378978866809120518155395984649658203125
+                ]
+            },
+            "properties": {
+                "mangrove_id": "1747161310-1e2d",
+                "area_no": "ABU-09",
+                "mangrove_type": "Rhizophora apiculata",
+                "status": "Growing",
+                "date_added": "2025-05-13 20:35:10"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.5520210369445095466289785690605640411376953125,
+                    14.7076947138741029874609012040309607982635498046875
+                ]
+            },
+            "properties": {
+                "mangrove_id": "1747161337-9ea2",
+                "area_no": "ABU_BAL-01",
+                "mangrove_type": "Rhizophora apiculata",
+                "status": "Healthy",
+                "date_added": "2025-05-13 20:35:37",
+                "date_updated": "2025-05-13 20:49:26"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.55218563150401678285561501979827880859375,
+                    14.7074456587378978866809120518155395984649658203125
+                ]
+            },
+            "properties": {
+                "mangrove_id": "1747161451-c21d",
+                "area_no": "ABU_BAL-01",
+                "mangrove_type": "Rhizophora apiculata",
+                "status": "Healthy",
+                "date_added": "2025-05-13 20:37:31",
+                "date_updated": "2025-05-13 20:49:29"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.5518520094627916705576353706419467926025390625,
+                    14.7071187734403974189945074613206088542938232421875
+                ]
+            },
+            "properties": {
+                "mangrove_id": "1747161471-36b6",
+                "area_no": "ABU_BAL-01",
+                "mangrove_type": "Rhizophora apiculata",
+                "status": "Growing",
+                "date_added": "2025-05-13 20:37:51",
+                "date_updated": "2025-05-13 20:59:09"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.552012951832779208416468463838100433349609375,
+                    14.7070409435355173854986787773668766021728515625
+                ]
+            },
+            "properties": {
+                "mangrove_id": "1747162624-2c4f",
+                "area_no": "ABU_BAL-01",
+                "mangrove_type": "Rhizophora mucronata",
+                "status": "Healthy",
+                "date_added": "2025-05-13 20:57:04",
+                "date_updated": "2025-07-15 07:22:50"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.5515569605736487801550538279116153717041015625,
+                    14.7067763216513274215913043008185923099517822265625
+                ]
+            },
+            "properties": {
+                "mangrove_id": "1747162771-fadd",
+                "area_no": "ABU_BAL-01",
+                "mangrove_type": "Rhizophora mucronata",
+                "status": "Healthy",
+                "date_added": "2025-05-13 20:59:31",
+                "date_updated": "2025-05-13 20:59:40"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.5524367192331141040995134972035884857177734375,
+                    14.706957924939718651557996054179966449737548828125
+                ]
+            },
+            "properties": {
+                "mangrove_id": "1747162808-4763",
+                "area_no": "ABU_BAL-01",
+                "mangrove_type": "Sonneratia alba",
+                "status": "Growing",
+                "date_added": "2025-05-13 21:00:08",
+                "date_updated": "2025-05-13 21:03:08"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.5526083806100672290995134972035884857177734375,
+                    14.7070253775512096439115339308045804500579833984375
+                ]
+            },
+            "properties": {
+                "mangrove_id": "1747162873-76c8",
+                "area_no": "ABU_BAL-01",
+                "mangrove_type": "Rhizophora apiculata",
+                "status": "Healthy",
+                "date_added": "2025-05-13 21:01:13",
+                "date_updated": "2025-05-13 21:03:18"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.5522704183425304336196859367191791534423828125,
+                    14.706729623638448600786432507447898387908935546875
+                ]
+            },
+            "properties": {
+                "mangrove_id": "1747162944-f111",
+                "area_no": "ABU_BAL-01",
+                "mangrove_type": "Avicennia marina",
+                "status": "Healthy",
+                "date_added": "2025-05-13 21:02:24",
+                "date_updated": "2025-05-13 21:03:00"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.552625698569471524024265818297863006591796875,
+                    14.706532454140681664966905373148620128631591796875
+                ]
+            },
+            "properties": {
+                "mangrove_id": "1747163039-93ec",
+                "area_no": "ABU_BAL-01",
+                "mangrove_type": "Sonneratia alba",
+                "status": "Growing",
+                "date_added": "2025-05-13 21:03:59"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.5521416841047397383590578101575374603271484375,
+                    14.706527265467283172029056004248559474945068359375
+                ]
+            },
+            "properties": {
+                "mangrove_id": "1747163055-6fe7",
+                "area_no": "ABU-09",
+                "mangrove_type": "Rhizophora mucronata",
+                "status": "Healthy",
+                "date_added": "2025-05-13 21:04:15",
+                "date_updated": "2025-05-13 21:07:13"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.551943177047832023163209669291973114013671875,
+                    14.7064546240267493004694188130088150501251220703125
+                ]
+            },
+            "properties": {
+                "mangrove_id": "1747163067-c8e9",
+                "area_no": "ABU_BAL-01",
+                "mangrove_type": "Rhizophora apiculata",
+                "status": "Healthy",
+                "date_added": "2025-05-13 21:04:27",
+                "date_updated": "2025-05-13 21:05:03"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.551894911046275638000224716961383819580078125,
+                    14.706288586357626257949959835968911647796630859375
+                ]
+            },
+            "properties": {
+                "mangrove_id": "1747163118-8a96",
+                "area_no": "ABU_BAL-01",
+                "mangrove_type": "Rhizophora apiculata",
+                "status": "Healthy",
+                "date_added": "2025-05-13 21:05:18",
+                "date_updated": "2025-05-13 21:06:53"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.551792994966973537884769029915332794189453125,
+                    14.70615368065845274259118014015257358551025390625
+                ]
+            },
+            "properties": {
+                "mangrove_id": "1747163171-f856",
+                "area_no": "ABU_BAL-01",
+                "mangrove_type": "Rhizophora mucronata",
+                "status": "Healthy",
+                "date_added": "2025-05-13 21:06:11",
+                "date_updated": "2025-05-13 21:06:37"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.5522231588404196145347668789327144622802734375,
+                    14.7061900014318087670517343212850391864776611328125
+                ]
+            },
+            "properties": {
+                "mangrove_id": "1747163272-2ace",
+                "area_no": "ABU_BAL-01",
+                "mangrove_type": "Rhizophora apiculata",
+                "status": "Growing",
+                "date_added": "2025-05-13 21:07:52"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.5522231588404196145347668789327144622802734375,
+                    14.7060395296171240175908678793348371982574462890625
+                ]
+            },
+            "properties": {
+                "mangrove_id": "1747163283-1f5d",
+                "area_no": "ABU_BAL-01",
+                "mangrove_type": "Rhizophora apiculata",
+                "status": "Healthy",
+                "date_added": "2025-05-13 21:08:03"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.5522124260726997135861893184483051300048828125,
+                    14.7056866987483640940581608447246253490447998046875
+                ]
+            },
+            "properties": {
+                "mangrove_id": "1747163324-136c",
+                "area_no": "ABU_BAL-01",
+                "mangrove_type": "Sonneratia alba",
+                "status": "Healthy",
+                "date_added": "2025-05-13 21:08:44"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.5531340975086322941933758556842803955078125,
+                    14.7062211335184453986357766552828252315521240234375
+                ]
+            },
+            "properties": {
+                "mangrove_id": "1747163354-ed57",
+                "area_no": "ABU_BAL-01",
+                "mangrove_type": "Rhizophora mucronata",
+                "status": "Growing",
+                "date_added": "2025-05-13 21:09:14",
+                "date_updated": "2025-05-13 21:09:27"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.5529368878923150987247936427593231201171875,
+                    14.70595132195338550218366435728967189788818359375
+                ]
+            },
+            "properties": {
+                "mangrove_id": "1747163402-73fd",
+                "area_no": "ABU_BAL-01",
+                "mangrove_type": "Avicennia marina",
+                "status": "Healthy",
+                "date_added": "2025-05-13 21:10:02"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.5529946187082117603495134972035884857177734375,
+                    14.7058267934262705267656201613135635852813720703125
+                ]
+            },
+            "properties": {
+                "mangrove_id": "1747163414-e920",
+                "area_no": "ABU_BAL-01",
+                "mangrove_type": "Avicennia marina",
+                "status": "Healthy",
+                "date_added": "2025-05-13 21:10:14",
+                "date_updated": "2025-05-13 21:10:30"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.5475926399231099139797152020037174224853515625,
+                    14.73738731221556008676998317241668701171875
+                ]
+            },
+            "properties": {
+                "mangrove_id": "1747629604-bdab",
+                "area_no": "ABU-03",
+                "mangrove_type": "Rhizophora mucronata",
+                "status": "Healthy",
+                "date_added": "2025-05-19 06:40:04",
+                "date_updated": "2025-05-23 12:46:24"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.564788756786214207750163041055202484130859375,
+                    14.6860881243415892782877563149668276309967041015625
+                ]
+            },
+            "properties": {
+                "mangrove_id": "1756826290-d4c2",
+                "area_no": "PIL-01",
+                "mangrove_type": "Rhizophora apiculata",
+                "status": "Healthy",
+                "date_added": "2025-09-02 17:18:10"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.5037621333058694972351077012717723846435546875,
+                    14.7385286558492989428259534179233014583587646484375
+                ]
+            },
+            "properties": {
+                "mangrove_id": "1758535128-41d2",
+                "area_no": "ABU_12",
+                "mangrove_type": "Rhizophora mucronata",
+                "status": "Growing",
+                "date_added": "2025-09-22 05:58:48"
+            }
+        }
+    ]
+}

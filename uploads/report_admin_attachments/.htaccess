@@ -1,0 +1,9 @@
+# Allow only specific file types
+<FilesMatch "\.(jpg|jpeg|png|gif|webp|mp4|avi|mov|wmv)$">
+    Order Allow,Deny
+    Allow from all
+</FilesMatch>
+
+# Deny everything else
+Order Deny,Allow
+Deny from all

@@ -1,0 +1,13 @@
+.input-box img{
+    position: relative;
+    display: block;
+    right:25px;
+    width:20px;
+    cursor:pointer;
+    transition: .5s ease;
+}
+
+.input-box img.hide{
+    display: none;
+}
+

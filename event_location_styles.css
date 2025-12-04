@@ -1,0 +1,468 @@
+/* Enhanced Event Location System Styles */
+
+/* Map Modal Enhancements */
+.map-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.map-modal-content {
+    background-color: #fefefe;
+    margin: 3% auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 90%;
+    max-width: 1000px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.map-modal-header {
+    padding: 20px;
+    border-bottom: 2px solid #e0e0e0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, var(--base-clr) 0%, var(--placeholder-text-clr) 100%);
+    color: white;
+    border-radius: 8px 8px 0 0;
+}
+
+.map-modal-header h3 {
+    margin: 0;
+    font-size: 1.3rem;
+}
+
+.close-modal {
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s;
+    line-height: 1;
+    padding: 0 10px;
+}
+
+.close-modal:hover {
+    transform: scale(1.2);
+}
+
+/* Address Search Section */
+.address-search-section {
+    padding: 15px 20px;
+    background: #f8f9fa;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.address-search-container {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.address-search-input {
+    flex: 1;
+    padding: 10px 15px;
+    border: 2px solid #cbd5e0;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    transition: border-color 0.2s;
+}
+
+.address-search-input:focus {
+    outline: none;
+    border-color: var(--base-clr);
+    box-shadow: 0 0 0 3px rgba(18, 53, 36, 0.1);
+}
+
+.address-search-btn {
+    padding: 10px 20px;
+    background: var(--base-clr);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.2s;
+    white-space: nowrap;
+}
+
+.address-search-btn:hover {
+    background: var(--placeholder-text-clr);
+}
+
+.address-search-btn:disabled {
+    background: #999;
+    cursor: not-allowed;
+}
+
+.search-results {
+    margin-top: 10px;
+    max-height: 200px;
+    overflow-y: auto;
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    display: none;
+}
+
+.search-result-item {
+    padding: 10px 15px;
+    border-bottom: 1px solid #f0f0f0;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.search-result-item:last-child {
+    border-bottom: none;
+}
+
+.search-result-item:hover {
+    background: #f0f7ff;
+}
+
+.search-result-item.loading {
+    text-align: center;
+    color: #666;
+    cursor: default;
+}
+
+/* Map Container */
+.map-body {
+    padding: 20px;
+}
+
+#map {
+    height: 450px;
+    width: 100%;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Location Info Panel */
+.location-info-panel {
+    margin-top: 15px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 6px;
+    border-left: 4px solid var(--base-clr);
+}
+
+.location-info-panel h4 {
+    margin: 0 0 10px 0;
+    color: var(--base-clr);
+    font-size: 1rem;
+}
+
+.location-detail {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.location-detail:last-child {
+    border-bottom: none;
+}
+
+.location-detail label {
+    font-weight: 500;
+    color: #555;
+}
+
+.location-detail span {
+    color: #333;
+}
+
+.confidence-badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-left: 8px;
+}
+
+.confidence-high {
+    background: #d4edda;
+    color: #155724;
+}
+
+.confidence-medium {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.confidence-low {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+/* Map Footer Actions */
+.map-modal-footer {
+    padding: 15px 20px;
+    border-top: 2px solid #e0e0e0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f8f9fa;
+    border-radius: 0 0 8px 8px;
+}
+
+.coordinate-display {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.coordinate-display strong {
+    color: var(--base-clr);
+}
+
+.confirm-btn {
+    padding: 10px 25px;
+    background: var(--base-clr);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: all 0.2s;
+}
+
+.confirm-btn:hover {
+    background: var(--placeholder-text-clr);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.confirm-btn:disabled {
+    background: #999;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Locked Input Fields */
+.input-locked {
+    background-color: #e9ecef !important;
+    cursor: not-allowed;
+    border-color: #adb5bd !important;
+    color: #495057 !important;
+    position: relative;
+}
+
+.input-locked::after {
+    content: '🔒';
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.form-group.locked {
+    position: relative;
+}
+
+.form-group.locked::before {
+    content: '🔒 Auto-filled from map';
+    position: absolute;
+    top: -5px;
+    right: 0;
+    font-size: 0.75rem;
+    color: var(--base-clr);
+    background: #d4edda;
+    padding: 2px 8px;
+    border-radius: 4px;
+    z-index: 1;
+}
+
+/* Cross-Barangay Toggle */
+.cross-barangay-toggle-section {
+    padding: 15px;
+    background: #fff8e1;
+    border: 2px solid #ffd54f;
+    border-radius: 6px;
+    margin: 15px 0;
+}
+
+.cross-barangay-toggle-section.highlighted {
+    background: #fff3cd;
+    border-color: #ffc107;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        box-shadow: 0 0 0 0 rgba(255, 193, 7, 0.4);
+    }
+    50% {
+        box-shadow: 0 0 0 10px rgba(255, 193, 7, 0);
+    }
+}
+
+.toggle-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 24px;
+}
+
+.toggle-slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+.toggle-switch input:checked + .toggle-slider {
+    background-color: var(--base-clr);
+}
+
+.toggle-switch input:checked + .toggle-slider:before {
+    transform: translateX(26px);
+}
+
+.toggle-label {
+    font-weight: 600;
+    color: #333;
+    font-size: 1rem;
+}
+
+.cross-barangay-warning {
+    background: white;
+    padding: 12px;
+    border-radius: 4px;
+    border-left: 4px solid #ff9800;
+    margin-top: 10px;
+}
+
+.cross-barangay-warning p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+}
+
+.cross-barangay-warning strong {
+    color: var(--base-clr);
+}
+
+.cross-barangay-content {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 2px dashed #ffd54f;
+}
+
+/* Loading Overlay */
+.loading-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.9);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    border-radius: 6px;
+}
+
+.loading-overlay.active {
+    display: flex;
+}
+
+.spinner {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid var(--base-clr);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .map-modal-content {
+        width: 95%;
+        margin: 5% auto;
+    }
+
+    #map {
+        height: 350px;
+    }
+
+    .address-search-container {
+        flex-direction: column;
+    }
+
+    .address-search-btn {
+        width: 100%;
+    }
+
+    .map-modal-footer {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .coordinate-display {
+        font-size: 0.8rem;
+    }
+}

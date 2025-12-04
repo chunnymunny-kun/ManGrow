@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Advanced Mangrove Area Management Map</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        #map {
+            width: 100%;
+            height: 100vh;
+        }
+        .map-controls {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            z-index: 1000;
+            background: white;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+            display: flex;
+            flex-direction: column;
+        }
+        .control-btn {
+            padding: 8px 12px;
+            margin: 5px;
+            cursor: pointer;
+            background: #0078A8;
+            color: white;
+            border: none;
+            border-radius: 3px;
+        }
+        .leaflet-popup-content button.delete-btn {
+            background: #ff4444;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 3px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .area-info {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            background: white;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+        .layer-control {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 1000;
+            background: white;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+        .legend {
+            padding: 6px 8px;
+            font-size: 14px;
+            background: white;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+            border-radius: 5px;
+            line-height: 1.5;
+        }
+        .legend h4 {
+            margin: 0 0 10px;
+        }
+        .legend i {
+            width: 18px;
+            height: 18px;
+            float: left;
+            margin-right: 8px;
+            opacity: 0.7;
+        }
+        .popup-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .popup-table th, .popup-table td {
+            padding: 5px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        .popup-table th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+    <div class="map-controls">
+        <button class="control-btn" id="locate-btn"><i class="fas fa-location-arrow"></i> Locate Me</button>
+        <button class="control-btn" id="add-marker-btn"><i class="fas fa-map-pin"></i> Add Marker</button>
+        <button class="control-btn" id="edit-area-btn"><i class="fas fa-edit"></i> Edit Area</button>
+        <button class="control-btn" id="save-changes-btn"><i class="fas fa-save"></i> Save Changes</button>
+    </div>
+    <div class="area-info" id="area-info">
+        <strong>Total Area:</strong> <span id="total-area">0</span> m²
+    </div>
+    <div class="layer-control">
+        <label><input type="checkbox" id="mangrove-layer-toggle" checked> Show Mangrove Areas</label>
+    </div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@turf/turf@6/turf.min.js"></script>
+    <script src="update_mangrove_areas.js"></script>
+    
+    <script>
+        // Initialize map centered on Bataan
+        const map = L.map('map').setView([14.69, 120.27], 13);
+        
+        // Add base tile layer
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        // Layer groups
+        const markersLayer = L.layerGroup().addTo(map);
+        const combinedAreaLayer = L.layerGroup().addTo(map);
+        const extendedmangrovelayer = L.layerGroup().addTo(map);
+        
+        // Marker icon
+        const customIcon = L.icon({
+            iconUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon.png',
+            iconSize: [25, 41],
+            iconAnchor: [12, 41]
+        });
+
+        // Variables
+        let isAddingMarker = false;
+        let isEditingArea = false;
+        let markers = [];
+        let combinedArea = null;
+        let combinedAreaPolygon = null;
+        let totalArea = 0;
+        let mangroveAreas = [];
+        let editableMangroveLayers = [];
+        let areaCounter = 1;
+
+        // Standardized marker area size (100 square meters)      
+        const MARKER_AREA_SIZE = 100;
+        // Side length for square area (sqrt(10) ≈ 3.16 meters)
+        const SQUARE_SIDE = Math.sqrt(MARKER_AREA_SIZE);
+
+        // Initialize the main Bataan area
+        function initializeMainArea() {
+            // Create a polygon around Bataan coordinates
+            const bataanPolygon = turf.polygon([[
+                [120.25, 14.68],
+                [120.29, 14.68],
+                [120.29, 14.70],
+                [120.25, 14.70],
+                [120.25, 14.68]
+            ]]);
+            
+            combinedArea = bataanPolygon;
+            updateCombinedAreaLayer();
+            calculateTotalArea();
+        }
+
+        // Update the combined area layer on the map
+        function updateCombinedAreaLayer() {
+            combinedAreaLayer.clearLayers();
+            
+            if (combinedArea) {
+                combinedAreaPolygon = L.geoJSON(combinedArea, {
+                    style: {
+                        color: '#3388ff',
+                        weight: 2,
+                        opacity: 1,
+                        fillColor: '#3388ff',
+                        fillOpacity: 0.2
+                    }
+                }).addTo(combinedAreaLayer);
+                
+                if (isEditingArea) {
+                    combinedAreaPolygon.editing.enable();
+                }
+            }
+        }
+
+        // Create a square area around a marker
+        function createSquareArea(latlng) {
+            // Convert meters to degrees (approximate)
+            const meterToDegree = 1 / 111320; // 1 degree ≈ 111.32 km at equator
+            const halfSide = SQUARE_SIDE / 2 * meterToDegree;
+            
+            const square = turf.polygon([[
+                [latlng.lng - halfSide, latlng.lat - halfSide],
+                [latlng.lng + halfSide, latlng.lat - halfSide],
+                [latlng.lng + halfSide, latlng.lat + halfSide],
+                [latlng.lng - halfSide, latlng.lat + halfSide],
+                [latlng.lng - halfSide, latlng.lat - halfSide]
+            ]]);
+            
+            return square;
+        }
+
+        // Add a marker to the map
+        function addMarker(e) {
+            const marker = L.marker(e.latlng, {
+                icon: customIcon,
+                draggable: true
+            }).addTo(markersLayer);
+            
+            // Create square area for this marker
+            const markerArea = createSquareArea(e.latlng);
+            
+            marker.bindPopup(`
+                <b>Marker</b><br>
+                Lat: ${e.latlng.lat.toFixed(5)}<br>
+                Lng: ${e.latlng.lng.toFixed(5)}<br>
+                Area: ${MARKER_AREA_SIZE} m²<br>
+                <button class="delete-btn" onclick="deleteMarker(${marker._leaflet_id})">Delete</button>
+            `);
+            
+            markers.push({
+                id: marker._leaflet_id,
+                latlng: e.latlng,
+                area: markerArea
+            });
+            
+            // Combine all areas (markers and base area)
+            combineAllAreas();
+        }
+
+        // Combine all areas (base area + all marker areas + mangrove areas)
+        function combineAllAreas() {
+            let areasToCombine = [];
+            
+            // Start with the base Bataan area if it exists
+            if (combinedArea) {
+                areasToCombine.push(combinedArea);
+            }
+            
+            // Add all marker areas
+            markers.forEach(marker => {
+                areasToCombine.push(marker.area);
+            });
+            
+            // Add all mangrove areas
+            mangroveAreas.forEach(area => {
+                areasToCombine.push(area);
+            });
+            
+            // Combine all areas
+            if (areasToCombine.length > 0) {
+                let newCombinedArea = areasToCombine[0];
+                
+                for (let i = 1; i < areasToCombine.length; i++) {
+                    if (turf.booleanIntersects(newCombinedArea, areasToCombine[i])) {
+                        newCombinedArea = turf.union(newCombinedArea, areasToCombine[i]);
+                    } else {
+                        // If they don't intersect, just combine them
+                        newCombinedArea = turf.combine(
+                            turf.featureCollection([newCombinedArea, areasToCombine[i]])
+                        ).features[0];
+                    }
+                }
+                
+                combinedArea = newCombinedArea;
+                updateCombinedAreaLayer();
+                calculateTotalArea();
+            }
+        }
+
+        // Delete a marker and update areas
+        function deleteMarker(id) {
+            let markerIndex = -1;
+            let markerToRemove = null;
+            
+            // Find and remove the marker
+            markersLayer.eachLayer(function(layer) {
+                if (layer._leaflet_id === id) {
+                    markerIndex = markers.findIndex(m => m.id === id);
+                    markerToRemove = markers[markerIndex];
+                    markersLayer.removeLayer(layer);
+                }
+            });
+            
+            if (markerIndex !== -1 && markerToRemove) {
+                // Remove from array
+                markers.splice(markerIndex, 1);
+                
+                // Rebuild combined area without this marker's area
+                rebuildCombinedArea();
+            }
+        }
+
+        // Rebuild combined area after marker deletion
+        function rebuildCombinedArea() {
+            // Start fresh with just the base Bataan area
+            let newCombinedArea = turf.polygon([[
+                [120.25, 14.68],
+                [120.29, 14.68],
+                [120.29, 14.70],
+                [120.25, 14.70],
+                [120.25, 14.68]
+            ]]);
+            
+            // Combine with all remaining markers
+            markers.forEach(marker => {
+                if (newCombinedArea) {
+                    if (turf.booleanIntersects(newCombinedArea, marker.area)) {
+                        newCombinedArea = turf.union(newCombinedArea, marker.area);
+                    } else {
+                        // If they don't intersect, just combine them
+                        newCombinedArea = turf.combine(
+                            turf.featureCollection([newCombinedArea, marker.area])
+                        ).features[0];
+                    }
+                } else {
+                    newCombinedArea = marker.area;
+                }
+            });
+            
+            // Combine with all mangrove areas
+            mangroveAreas.forEach(area => {
+                if (newCombinedArea) {
+                    if (turf.booleanIntersects(newCombinedArea, area)) {
+                        newCombinedArea = turf.union(newCombinedArea, area);
+                    } else {
+                        // If they don't intersect, just combine them
+                        newCombinedArea = turf.combine(
+                            turf.featureCollection([newCombinedArea, area])
+                        ).features[0];
+                    }
+                } else {
+                    newCombinedArea = area;
+                }
+            });
+            
+            combinedArea = newCombinedArea;
+            updateCombinedAreaLayer();
+            calculateTotalArea();
+        }
+
+        // Calculate total area in square meters
+        function calculateTotalArea() {
+            if (!combinedArea) {
+                totalArea = 0;
+            } else {
+                totalArea = turf.area(combinedArea);
+            }
+            document.getElementById('total-area').textContent = totalArea.toFixed(2);
+        }
+
+        // Toggle marker addition mode
+        function toggleAddMarker() {
+            isAddingMarker = !isAddingMarker;
+            const btn = document.getElementById('add-marker-btn');
+            
+            if (isAddingMarker) {
+                btn.style.backgroundColor = '#4CAF50';
+                map.on('click', addMarker);
+                map.getContainer().style.cursor = 'crosshair';
+                
+                // Disable area editing if active
+                if (isEditingArea) {
+                    toggleEditArea();
+                }
+            } else {
+                btn.style.backgroundColor = '#0078A8';
+                map.off('click', addMarker);
+                map.getContainer().style.cursor = '';
+            }
+        }
+
+        // Toggle area editing mode
+        function toggleEditArea() {
+            isEditingArea = !isEditingArea;
+            const btn = document.getElementById('edit-area-btn');
+            
+            if (isEditingArea) {
+                btn.style.backgroundColor = '#FF9800';
+                if (combinedAreaPolygon) {
+                    combinedAreaPolygon.editing.enable();
+                }
+                
+                // Enable editing for mangrove areas
+                editableMangroveLayers.forEach(layer => {
+                    layer.editing.enable();
+                });
+                
+                // Disable marker addition if active
+                if (isAddingMarker) {
+                    toggleAddMarker();
+                }
+            } else {
+                btn.style.backgroundColor = '#0078A8';
+                if (combinedAreaPolygon) {
+                    combinedAreaPolygon.editing.disable();
+                    // Update the combined area with edited shape
+                    const geoJSON = combinedAreaPolygon.toGeoJSON();
+                    combinedArea = geoJSON;
+                    calculateTotalArea();
+                }
+                
+                // Disable editing for mangrove areas
+                editableMangroveLayers.forEach(layer => {
+                    layer.editing.disable();
+                    // Update the mangrove area with edited shape
+                    const index = editableMangroveLayers.indexOf(layer);
+                    if (index !== -1) {
+                        mangroveAreas[index] = layer.toGeoJSON();
+                    }
+                });
+            }
+        }
+
+        // Locate user
+        function locateUser() {
+            map.locate({setView: true, maxZoom: 16});
+        }
+
+        // Save changes to mangrove areas
+        function saveChanges() {
+            // Create an array to hold the updated mangrove areas
+            const updatedMangroveAreas = [];
+            
+            // Collect all the mangrove areas from the editable layers
+            editableMangroveLayers.forEach(layer => {
+                updatedMangroveAreas.push(layer.toGeoJSON());
+            });
+            
+            // Call the update function from the external file
+            updateMangroveAreas(updatedMangroveAreas);
+            
+            // Rebuild the combined area to reflect any changes
+            rebuildCombinedArea();
+            
+            alert('Changes to mangrove areas have been saved!');
+        }
+
+        // Event listeners
+        document.getElementById('locate-btn').addEventListener('click', locateUser);
+        document.getElementById('add-marker-btn').addEventListener('click', toggleAddMarker);
+        document.getElementById('edit-area-btn').addEventListener('click', toggleEditArea);
+        document.getElementById('save-changes-btn').addEventListener('click', saveChanges);
+        document.getElementById('mangrove-layer-toggle').addEventListener('change', function(e) {
+            if (e.target.checked) {
+                map.addLayer(extendedmangrovelayer);
+            } else {
+                map.removeLayer(extendedmangrovelayer);
+            }
+        });
+
+        // Make deleteMarker function available globally
+        window.deleteMarker = deleteMarker;
+
+        // Handle location found
+        map.on('locationfound', function(e) {
+            L.marker(e.latlng, {
+                icon: customIcon
+            }).addTo(markersLayer)
+            .bindPopup("You are here").openPopup();
+        });
+
+        // Handle location error
+        map.on('locationerror', function(e) {
+            alert("Location access denied. Please enable location services.");
+        });
+
+        // Initialize the map
+        initializeMainArea();
+
+        // Fetch and display mangrove areas
+        fetch('extendedmangroveareas_updated.json')
+            .then(response => response.json())
+            .then(data => {
+                // Process each feature to add required properties
+                data.features.forEach((feature, index) => {
+                    // Calculate area in square meters and hectares
+                    const areaM2 = turf.area(feature);
+                    const areaHa = areaM2 / 10000;
+                    
+                    // Add or update properties
+                    feature.properties = {
+                        ...feature.properties,
+                        AreaNo: feature.properties.AreaNo || index + 1,
+                        AreaM2: Math.round(areaM2),
+                        AreaHa: areaHa.toFixed(2),
+                        Date_Created: feature.properties.Date_Created || new Date().toISOString().split('T')[0],
+                        Date_Updated: new Date().toISOString().split('T')[0]
+                    };
+                    
+                    // Add to our mangroveAreas array
+                    mangroveAreas.push(feature);
+                    
+                    // Update area counter
+                    areaCounter = Math.max(areaCounter, feature.properties.AreaNo + 1);
+                });
+
+                // Create GeoJSON layer with detailed popups
+                const mangroveLayer = L.geoJSON(data, {
+                    onEachFeature: function(feature, layer) {
+                        // Create popup content with a table
+                        let popupContent = `
+                            <div style="max-width: 300px;">
+                                <h3 style="margin-top: 0;">Mangrove Area #${feature.properties.AreaNo}</h3>
+                                <table class="popup-table">
+                                    <tr>
+                                        <th>Property</th>
+                                        <th>Value</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Class ID</td>
+                                        <td>${feature.properties.ClassID || 'N/A'}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Area (m²)</td>
+                                        <td>${feature.properties.AreaM2.toLocaleString()}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Area (ha)</td>
+                                        <td>${feature.properties.AreaHa}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Created</td>
+                                        <td>${feature.properties.Date_Created}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Updated</td>
+                                        <td>${feature.properties.Date_Updated}</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        `;
+                        
+                        // Bind the popup to the layer
+                        layer.bindPopup(popupContent);
+                        
+                        // Add to editable layers array
+                        editableMangroveLayers.push(layer);
+                        
+                        // Add hover effects
+                        layer.on({
+                            mouseover: function(e) {
+                                this.setStyle({
+                                    weight: 3,
+                                    color: '#666',
+                                    dashArray: '',
+                                    fillOpacity: 0.7
+                                });
+                                this.bringToFront();
+                            },
+                            mouseout: function(e) {
+                                this.setStyle({
+                                    weight: 1,
+                                    color: '#2d7561',
+                                    fillOpacity: 0.5
+                                });
+                            },
+                            click: function(e) {
+                                if (isAddingMarker) {
+                                    addMarker(e);
+                                } else {
+                                    this.openPopup();
+                                }
+                            }
+                        });
+                    },
+                    style: function(feature) {
+                        return {
+                            fillColor: '#3d9970',
+                            weight: 1,
+                            opacity: 1,
+                            color: '#2d7561',
+                            fillOpacity: 0.5
+                        };
+                    }
+                }).addTo(extendedmangrovelayer);
+                
+                // Add legend
+                const legend = L.control({position: 'bottomright'});
+                legend.onAdd = function(map) {
+                    const div = L.DomUtil.create('div', 'info legend');
+                    div.innerHTML = `
+                        <h4>Area Units</h4>
+                        <div><i style="background:#3d9970"></i> 1 m² = 0.0001 ha</div>
+                        <div><i style="background:#3d9970"></i> 1 ha = 10,000 m²</div>
+                    `;
+                    return div;
+                };
+                legend.addTo(map);
+
+                // Calculate and log total mangrove area
+                const totalMangroveArea = data.features.reduce((sum, feature) => sum + feature.properties.AreaM2, 0);
+                console.log(`Total mangrove area: ${totalMangroveArea.toLocaleString()} m²`);
+                
+                // Combine all areas including the new mangrove areas
+                combineAllAreas();
+            })
+            .catch(error => {
+                console.error('Error fetching extendedmangroveareas.json:', error);
+                L.popup()
+                    .setLatLng(map.getCenter())
+                    .setContent('<b>Error</b><br>Could not load mangrove areas data')
+                    .openOn(map);
+            });
+
+        // Add Leaflet.Editable plugin dynamically
+        const editableScript = document.createElement('script');
+        editableScript.src = 'https://cdn.jsdelivr.net/npm/leaflet-editable@1.2.0/dist/leaflet-editable.min.js';
+        editableScript.onload = function() {
+            console.log('Leaflet.Editable loaded');
+        };
+        document.head.appendChild(editableScript);
+    </script>
+</body>
+</html>

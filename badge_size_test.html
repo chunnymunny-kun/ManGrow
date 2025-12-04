@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Badge Size Test</title>
+    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <style>
+        body { 
+            padding: 20px; 
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+        }
+        .test-section {
+            margin-bottom: 40px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #333;
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-section">
+        <h2>Badge Consistency Test - Flex Layout</h2>
+        <p>Testing badge sizes with different title lengths using flex layout:</p>
+        
+        <div class="badges-grid">
+            <!-- Short title -->
+            <div class="badge">
+                <div class="badge-icon">
+                    <i class="fas fa-star"></i>
+                </div>
+                <p>Star</p>
+            </div>
+            
+            <!-- Medium title -->
+            <div class="badge">
+                <div class="badge-icon">
+                    <i class="fas fa-trophy"></i>
+                </div>
+                <p>Champion Trophy</p>
+            </div>
+            
+            <!-- Long title (should use ellipsis) -->
+            <div class="badge">
+                <div class="badge-icon">
+                    <i class="fas fa-medal"></i>
+                </div>
+                <p>Very Long Badge Title That Should Be Truncated</p>
+            </div>
+            
+            <!-- Another long title -->
+            <div class="badge">
+                <div class="badge-icon">
+                    <i class="fas fa-award"></i>
+                </div>
+                <p>Extremely Long Badge Name That Definitely Exceeds Normal Length</p>
+            </div>
+            
+            <!-- Disabled badge test -->
+            <div class="badge badge-disabled">
+                <div class="badge-icon">
+                    <i class="fas fa-lock"></i>
+                </div>
+                <p>Locked Badge With Long Name</p>
+            </div>
+
+            <!-- Extra badges to test wrapping -->
+            <div class="badge">
+                <div class="badge-icon">
+                    <i class="fas fa-tree"></i>
+                </div>
+                <p>Tree</p>
+            </div>
+            
+            <div class="badge">
+                <div class="badge-icon">
+                    <i class="fas fa-leaf"></i>
+                </div>
+                <p>Environmental Badge</p>
+            </div>
+            
+            <div class="badge">
+                <div class="badge-icon">
+                    <i class="fas fa-seedling"></i>
+                </div>
+                <p>Garden Master</p>
+            </div>
+            
+            <div class="badge">
+                <div class="badge-icon">
+                    <i class="fas fa-recycle"></i>
+                </div>
+                <p>Recycling Champion Pro Max</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="test-section">
+        <h2>Badge Item Test (All Badges Section)</h2>
+        <p>Testing badge-item consistency:</p>
+        
+        <div class="badges-grid">
+            <div class="badge-item">
+                <div class="badge">
+                    <div class="badge-icon">
+                        <i class="fas fa-tree"></i>
+                    </div>
+                    <p>Tree Planter</p>
+                </div>
+            </div>
+            
+            <div class="badge-item">
+                <div class="badge">
+                    <div class="badge-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <p>Environmental Conservation Expert Badge</p>
+                </div>
+            </div>
+            
+            <div class="badge-item">
+                <div class="badge badge-disabled">
+                    <div class="badge-icon">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <p>Master Gardener Professional</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        console.log('Badge size test loaded successfully!');
+        
+        // Check all badge elements have consistent sizing
+        setTimeout(() => {
+            const badges = document.querySelectorAll('.badge');
+            console.log('Total badges found:', badges.length);
+            
+            badges.forEach((badge, index) => {
+                const rect = badge.getBoundingClientRect();
+                console.log(`Badge ${index + 1}:`, {
+                    width: rect.width,
+                    height: rect.height,
+                    title: badge.querySelector('p').textContent
+                });
+            });
+        }, 100);
+    </script>
+</body>
+</html>

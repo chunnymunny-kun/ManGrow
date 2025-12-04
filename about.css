@@ -1,0 +1,707 @@
+:root {
+    --base-clr: #123524;
+    --line-clr: indigo;
+    --secondarybase-clr: lavenderblush;
+    --text-clr: #222533;
+    --accent-clr: #EFE3C2;
+    --secondary-text-clr: #123524;
+    --placeholder-text-clr: #3E7B27;
+    --event-clr: #FFFDF6;
+    --card-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+/* Base styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-clr);
+    background: var(--secondarybase-clr);
+}
+
+.about-main-container {
+    width: 100%;
+    margin: 0;
+    padding: clamp(15px, 5vw, 20px);
+    box-sizing: border-box;
+}
+
+/* Container for consistent spacing */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    border: none !important;
+}
+
+/* Section defaults - centered */
+section {
+    text-align: center;
+    margin-bottom: 40px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+/* Hero Section */
+.about-hero {
+    background: linear-gradient(135deg, var(--accent-clr), var(--event-clr));
+    padding: 40px 20px;
+    border-radius: 12px;
+    margin-bottom: 40px;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.hero-text h1 {
+    font-size: 2.5rem;
+    color: var(--base-clr);
+    margin-bottom: 10px;
+}
+
+.mangrow-highlight {
+    color: var(--secondary-text-clr);
+}
+
+.hero-subtitle {
+    color: var(--placeholder-text-clr);
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.hero-stats {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--base-clr);
+    display: block;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: var(--placeholder-text-clr);
+    display: block;
+    margin-top: 5px;
+}
+
+.hero-image {
+    flex: 0 0 40%;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Mission & Vision */
+.mission-vision {
+    padding: 40px 0;
+}
+
+.mission-vision-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.mission-card, .vision-card {
+    background: var(--event-clr);
+    padding: 30px 20px;
+    border-radius: 8px;
+    box-shadow: var(--card-shadow);
+    transition: var(--transition);
+    text-align: center;
+}
+
+.mission-card:hover, .vision-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--base-clr);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+    color: azure;
+}
+
+.card-icon i {
+    font-size: 1.5rem;
+}
+
+.mission-card h3, .vision-card h3 {
+    color: var(--base-clr);
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.mission-card p, .vision-card p {
+    color: var(--text-clr);
+    line-height: 1.6;
+}
+
+/* Features Section */
+.features-section {
+    padding: 40px 0;
+    background: var(--accent-clr);
+}
+
+.section-header {
+    margin-bottom: 30px;
+}
+
+.section-header h2 {
+    color: var(--base-clr);
+    margin-bottom: 10px;
+    font-size: 2rem;
+}
+
+.section-header p {
+    color: var(--placeholder-text-clr);
+    font-size: 1.1rem;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.feature-card {
+    background: var(--event-clr);
+    padding: 25px 20px;
+    border-radius: 8px;
+    box-shadow: var(--card-shadow);
+    transition: var(--transition);
+    text-align: center;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--base-clr);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+    color: azure;
+}
+
+.feature-icon i {
+    font-size: 1.5rem;
+}
+
+.feature-card h4 {
+    color: var(--base-clr);
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.feature-card p {
+    color: var(--text-clr);
+    line-height: 1.5;
+}
+
+/* Impact Section */
+.impact-section {
+    background: linear-gradient(135deg, var(--base-clr), var(--placeholder-text-clr));
+    color: azure;
+    padding: 50px 20px;
+    border-radius: 12px;
+}
+
+.impact-content h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: azure;
+}
+
+.impact-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    opacity: 0.9;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    color: azure;
+}
+
+.impact-stats {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.impact-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.impact-stat i {
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+    color: azure;
+}
+
+.impact-stat span {
+    font-size: 1rem;
+    font-weight: 500;
+    color: azure;
+}
+
+/* Team Section */
+.team-section {
+    padding: 40px 0;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.team-member {
+    background: var(--event-clr);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+    transition: var(--transition);
+    cursor: pointer;
+    text-align: center;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+}
+
+.member-image {
+    height: 180px; /* Increased height for larger images */
+    overflow: hidden;
+}
+
+.member-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.team-member:hover .member-image img {
+    transform: scale(1.05);
+}
+
+.member-info {
+    padding: 15px 10px;
+}
+
+.member-info h4 {
+    color: var(--base-clr);
+    margin-bottom: 5px;
+    font-size: 1rem;
+}
+
+.member-role {
+    color: var(--placeholder-text-clr);
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.member-description {
+    display: none; /* Hidden on all screen sizes */
+}
+
+.member-skills {
+    display: none; /* Hidden on all screen sizes */
+}
+
+/* CTA Section */
+.cta-section {
+    padding: 40px 0;
+    background: var(--accent-clr);
+}
+
+.cta-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.cta-text h2 {
+    color: var(--base-clr);
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+}
+
+.cta-text p {
+    color: var(--text-clr);
+    line-height: 1.6;
+    max-width: 500px;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.cta-btn {
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: var(--transition);
+    border: 2px solid transparent;
+    font-size: 0.95rem;
+    text-align: center;
+    min-width: 120px;
+}
+
+.cta-btn.primary {
+    background: var(--base-clr);
+    color: azure;
+}
+
+.cta-btn.primary:hover {
+    background: var(--placeholder-text-clr);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(62, 123, 39, 0.3);
+}
+
+.cta-btn.secondary {
+    background: transparent;
+    color: var(--base-clr);
+    border: 2px solid var(--base-clr);
+}
+
+.cta-btn.secondary:hover {
+    background: var(--base-clr);
+    color: azure;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(18, 53, 36, 0.3);
+}
+
+/* Modal */
+.team-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.team-modal.show {
+    display: flex;
+}
+
+.modal-content {
+    background: var(--event-clr);
+    border-radius: 12px;
+    max-width: 500px;
+    width: 100%;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: var(--card-shadow);
+    animation: modalFadeIn 0.3s ease;
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid var(--line-clr);
+    background: var(--accent-clr);
+}
+
+.modal-header h3 {
+    color: var(--base-clr);
+    margin: 0;
+    font-size: 1.3rem;
+}
+
+.modal-close {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--base-clr);
+    padding: 5px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.modal-close:hover {
+    background: rgba(18, 53, 36, 0.1);
+}
+
+.modal-body {
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.modal-image {
+    width: 100%;
+    max-width: 200px;
+    height: 200px; /* Increased height for modal */
+    border-radius: 8px;
+    overflow: hidden;
+    flex-shrink: 0;
+    margin: 0 auto;
+}
+
+.modal-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.modal-text {
+    flex: 1;
+    text-align: left;
+}
+
+.modal-role {
+    color: var(--placeholder-text-clr);
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.modal-text p {
+    color: var(--text-clr);
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.modal-text strong {
+    color: var(--base-clr);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .member-image {
+        height: 160px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .hero-image {
+        flex: 0 0 auto;
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    .mission-vision-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .impact-stats {
+        flex-direction: column;
+        gap: 25px;
+    }
+    
+    .cta-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    
+    .cta-buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .modal-body {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    
+    .modal-text {
+        text-align: center;
+    }
+    
+    .member-image {
+        height: 140px;
+    }
+    
+    .modal-image {
+        max-width: 150px;
+        height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-main-container {
+        padding: 10px;
+    }
+    
+    section {
+        margin-bottom: 30px;
+    }
+    
+    .about-hero {
+        padding: 30px 15px;
+    }
+    
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-stats {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    
+    .team-member {
+        min-width: 140px;
+    }
+    
+    .member-image {
+        height: 120px;
+    }
+    
+    .member-info {
+        padding: 10px 8px;
+    }
+    
+    .member-info h4 {
+        font-size: 0.9rem;
+    }
+    
+    .member-role {
+        font-size: 0.8rem;
+    }
+    
+    .cta-btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+        min-width: 110px;
+    }
+    
+    .modal-content {
+        margin: 10px;
+        max-height: 85vh;
+    }
+    
+    .modal-header {
+        padding: 15px;
+    }
+    
+    .modal-body {
+        padding: 15px;
+    }
+    
+    .modal-image {
+        width: 100%;
+        max-width: 120px;
+        height: 120px;
+        margin: 0 auto;
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 360px) {
+    .team-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .team-member {
+        min-width: auto;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .cta-btn {
+        width: 100%;
+    }
+    
+    .member-image {
+        height: 150px;
+    }
+}

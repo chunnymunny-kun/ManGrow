@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Navigation Test</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="view_barangay_profile.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .test-info {
+            background: #f0f0f0;
+            padding: 10px;
+            margin: 20px;
+            border-radius: 5px;
+        }
+        .resize-info {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background: #333;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="resize-info" id="screenInfo">Resize window to test mobile/desktop views</div>
+    
+    <header class="mangrove-header">
+        <form action="#" class="searchbar">
+            <input type="text" placeholder="Search">
+            <button type="submit"><i class='bx bx-search-alt-2'></i></button> 
+        </form>
+        <nav class="navbar">
+            <ul class="nav-list">
+                <li><i class='bx bx-home-alt'></i><a href="index.php">Home</a></li>
+                <li><i class='bx bx-lightbulb'></i><a href="initiatives.php">Initiatives</a></li>
+                <li><i class='bx bx-calendar'></i><a href="events.php">Events</a></li>
+                <li><i class='bx bx-trophy'></i><a href="leaderboards.php">Leaderboards</a></li>
+                <li><i class='bx bx-group'></i><a href="organizations.php">Organizations</a></li>
+            </ul>
+            <div class="userbox">
+                <div class="default-profile-icon"><i class="fas fa-user"></i></div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="test-info">
+        <h3>Mobile Navigation Test</h3>
+        <p><strong>Desktop (> 800px):</strong> Should show text labels, hide icons</p>
+        <p><strong>Mobile (≤ 800px):</strong> Should show icons, hide text labels</p>
+        <p><strong>Navigation Changes:</strong></p>
+        <ul>
+            <li>Home moved from sidebar to header navbar</li>
+            <li>About moved from header navbar to sidebar</li>
+            <li>Icons added to all navigation items</li>
+        </ul>
+    </div>
+
+    <script>
+        function updateScreenInfo() {
+            const width = window.innerWidth;
+            const info = document.getElementById('screenInfo');
+            info.textContent = `Screen: ${width}px ${width <= 800 ? '(Mobile)' : '(Desktop)'}`;
+        }
+        
+        window.addEventListener('resize', updateScreenInfo);
+        updateScreenInfo();
+    </script>
+</body>
+</html>

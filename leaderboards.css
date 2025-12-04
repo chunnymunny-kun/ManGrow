@@ -1,0 +1,2331 @@
+/* leaderboards.css - Tab-based Design */
+.leaderboards {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--accent-clr);
+    min-height: calc(100vh - 120px);
+    box-sizing: border-box;
+    overflow-y: hidden;
+    overflow-x:hidden;
+    width: 100%;
+    padding: 2rem 1rem;
+}
+
+.leaderboards h1 {
+    text-align: center;
+    color: var(--base-clr);
+    font-size: 1.8rem;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+}
+
+/* Badge Image Styles */
+.badge-image-small {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent-clr), #f0f0f0);
+    padding: 3px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.badge-icon-activity i {
+    font-size: 1.5rem;
+    color: var(--base-clr);
+}
+
+/* Apply badge color if available */
+.badge-icon-activity {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-left: 0.5rem;
+    flex-shrink: 0;
+}
+
+/* Activity item layout improvements */
+.activity-item {
+    display: flex;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 0.9rem;
+}
+
+.activity-item:last-child {
+    border-bottom: none;
+}
+
+.activity-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 1rem;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--base-clr);
+    color: white;
+    font-weight: 600;
+    overflow: hidden;
+}
+
+.activity-icon img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.activity-details {
+    flex: 1;
+    min-width: 0;
+}
+
+.activity-user {
+    font-weight: 600;
+    color: var(--base-clr);
+    margin-bottom: 0.3rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.badge-name {
+    font-weight: 600;
+    color: var(--base-clr);
+    background: rgba(62, 123, 39, 0.1);
+    padding: 0.2rem 0.5rem;
+    border-radius: 12px;
+    font-size: 0.85rem;
+}
+
+.activity-date {
+    font-size: 0.8rem;
+    color: #6b7280;
+    margin-top: 0.3rem;
+}
+
+.no-activities {
+    text-align: center;
+    padding: 2rem;
+    color: #6b7280;
+}
+
+.no-activities i {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: #d1d5db;
+}
+
+.no-activities p {
+    margin: 0;
+    font-style: italic;
+}
+
+/* Tab Navigation */
+.tab-navigation {
+    display: flex;
+    justify-content: center;
+    background-color: var(--event-clr);
+    border-radius: 10px;
+    padding: 0.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.tab-btn {
+    flex: 1;
+    min-width: 150px;
+    padding: 1rem 1.5rem;
+    background: transparent;
+    border: none;
+    border-radius: 8px;
+    color: var(--text-clr);
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.tab-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+        transparent, 
+        rgba(255, 255, 255, 0.2), 
+        transparent
+    );
+    transition: left 0.6s ease;
+    pointer-events: none;
+}
+
+.tab-btn:hover::before {
+    left: 100%;
+}
+
+.tab-btn:hover {
+    background: rgba(62, 123, 39, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.tab-btn.active {
+    background: linear-gradient(135deg, var(--base-clr), #4a8b5c);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(62, 123, 39, 0.3);
+}
+
+.tab-btn.active:hover {
+    background: linear-gradient(135deg, #2d5e3a, var(--base-clr));
+}
+
+/* Tab Content */
+.tab-content {
+    display: none;
+    max-width: 1600px;
+    width:100%;
+    animation: fadeIn 0.4s ease;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Leaderboards Tab Content */
+.leaderboards-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+/* ============================================
+   DYNAMIC LAYOUT REORDERING (Flexbox Order)
+   ============================================ */
+
+/* Default order for INDIVIDUAL filter */
+.leaderboards-content .user-points {
+    order: 1;
+}
+
+.leaderboards-content .leaderboard-filters {
+    order: 2;
+}
+
+.leaderboards-content .leaderboards-list {
+    order: 3; /* Top Contributors appear FIRST by default */
+}
+
+.leaderboards-content .leaderboards-cycles {
+    order: 4; /* Cycle sections appear SECOND by default */
+}
+
+.leaderboards-content .leaderboards-charts {
+    order: 5; /* Graphs always appear LAST */
+}
+
+/* Reorder for BARANGAY/MUNICIPALITY/ORGANIZATION filters */
+/* When cycle-first class is added, cycle sections move to top */
+.leaderboards-content.cycle-first .leaderboards-list {
+    order: 4; /* Move Top Contributors BELOW cycles */
+}
+
+.leaderboards-content.cycle-first .leaderboards-cycles {
+    order: 3; /* Move Cycle sections to TOP (before contributors) */
+}
+
+/* ============================================ */
+
+.leaderboards-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.leaderboards-cycles {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.leaderboards-charts {
+    width: 100%;
+}
+
+/* User Points Summary */
+.user-points {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background: linear-gradient(135deg, var(--base-clr), #4a8b5c);
+    color: white;
+    padding: 1.25rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(62, 123, 39, 0.2);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.user-points h2 {
+    font-size: 1.1rem;
+    margin: 0;
+    font-weight: 600;
+}
+
+.user-points p {
+    margin: 0;
+    font-size: 0.85rem;
+    opacity: 0.9;
+}
+
+.points-value {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--accent-clr);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Rewards Claim Button & System */
+.points-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position:relative;
+}
+
+.claim-rewards-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #f39c12, #e67e22);
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(243, 156, 18, 0.3);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.claim-rewards-btn i {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.claim-rewards-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(243, 156, 18, 0.5);
+    animation: pulse 1.5s infinite;
+}
+
+.pending-indicator {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 20px;
+    height: 20px;
+    background: #e74c3c;
+    border-radius: 50%;
+    border: 2px solid white;
+    animation: pulse 2s infinite;
+}
+
+.pending-rewards-notice {
+    background: linear-gradient(135deg, #fff3cd, #ffeaa7);
+    border-left: 4px solid #f39c12;
+    padding: 12px;
+    border-radius: 8px;
+    margin-top: 15px;
+    font-size: 0.95rem;
+    color: #856404;
+    animation: slideIn 0.5s ease-out;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.1); opacity: 0.8; }
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideDown {
+    from { 
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to { 
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Rewards Modal */
+.rewards-modal {
+    position: fixed;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    animation: fadeIn 0.3s ease-out;
+}
+
+.rewards-modal-content {
+    background: white;
+    margin: 3% auto;
+    padding: 0;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 900px;
+    max-height: 85vh;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    animation: slideDown 0.4s ease-out;
+}
+
+.rewards-modal-header {
+    background: linear-gradient(135deg, #2c5530, #4a7c59);
+    color: white;
+    padding: 25px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px 20px 0 0;
+}
+
+.rewards-modal-header h2 {
+    margin: 0;
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.rewards-modal-close {
+    font-size: 2rem;
+    cursor: pointer;
+    line-height: 1;
+    transition: all 0.3s ease;
+    background: none;
+    border: none;
+    color: white;
+}
+
+.rewards-modal-close:hover {
+    transform: rotate(90deg);
+    color: #f39c12;
+}
+
+.rewards-modal-body {
+    padding: 25px 30px;
+    max-height: calc(85vh - 100px);
+    overflow-y: auto;
+}
+
+.rewards-section {
+    margin-bottom: 30px;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.rewards-section h3 {
+    color: #2c5530;
+    font-size: 1.4rem;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.claim-all-btn {
+    background: linear-gradient(135deg, #27ae60, #229954);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.claim-all-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(39, 174, 96, 0.4);
+}
+
+.rewards-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.reward-card {
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    border-radius: 12px;
+    padding: 20px;
+    border-left: 5px solid #2c5530;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.reward-card:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.reward-card.claimed {
+    background: linear-gradient(135deg, #d4edda, #c3e6cb);
+    border-left-color: #28a745;
+    opacity: 0.8;
+}
+
+.reward-info {
+    flex: 1;
+}
+
+.reward-cycle {
+    font-weight: bold;
+    color: #2c5530;
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+}
+
+.reward-details {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.reward-detail-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.reward-points {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #f39c12;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.claim-single-btn {
+    background: linear-gradient(135deg, #f39c12, #e67e22);
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.claim-single-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(243, 156, 18, 0.4);
+}
+
+.claimed-badge {
+    background: #28a745;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.no-rewards-message {
+    text-align: center;
+    padding: 40px 20px;
+    color: #888;
+    font-size: 1.1rem;
+}
+
+.no-rewards-message i {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    opacity: 0.5;
+}
+
+.loading-message {
+    text-align: center;
+    padding: 40px 20px;
+    color: #888;
+}
+
+/* Filters */
+.leaderboard-filters {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 0.6rem 1.2rem;
+    background-color: var(--event-clr);
+    border: 2px solid transparent;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-clr);
+}
+
+.filter-btn.active {
+    background: linear-gradient(135deg, var(--placeholder-text-clr), #7a7a7a);
+    color: white;
+    border-color: var(--placeholder-text-clr);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.filter-btn:hover:not(.active) {
+    background-color: var(--base-clr);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(62, 123, 39, 0.2);
+}
+
+/* Leaderboards Grid */
+.leaderboards-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+    width: 100%;
+}
+
+/* Individual Leaderboard Cards */
+.leaderboard {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-top: 4px solid var(--base-clr);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 350px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.leaderboard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.leaderboard h2 {
+    margin: 0;
+    padding: 1.25rem;
+    color: var(--base-clr);
+    font-size: 1.1rem;
+    text-align: center;
+    border-bottom: 2px solid #f0f0f0;
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    font-weight: 600;
+}
+
+.leaderboard ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    flex: 1;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--placeholder-text-clr) transparent;
+}
+
+.leaderboard ul::-webkit-scrollbar {
+    width: 6px;
+}
+
+.leaderboard ul::-webkit-scrollbar-thumb {
+    background: var(--placeholder-text-clr);
+    border-radius: 3px;
+}
+
+.leaderboard ul::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.leaderboard li {
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid #f0f0f0;
+    display: flex;
+    align-items: center;
+    font-size: 0.95rem;
+    transition: background-color 0.2s ease;
+}
+
+.leaderboard li:hover {
+    background-color: #f8f9fa;
+}
+
+.leaderboard li:last-child {
+    border-bottom: none;
+}
+
+.rank {
+    font-weight: bold;
+    color: var(--base-clr);
+    margin-right: 1rem;
+    min-width: 2rem;
+    font-size: 1.1rem;
+}
+
+/* Charts Section */
+.graph-container {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-top: 4px solid var(--base-clr);
+}
+
+.chart-group {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.chart-group .chart-wrapper {
+    flex: 1;
+    min-width: 300px;
+}
+
+.chart-wrapper {
+    position: relative;
+    height: 300px;
+}
+
+.section-heading {
+    color: var(--base-clr);
+    font-size: 1.4rem;
+    margin: 0 0 1.5rem 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #e0e0e0;
+    text-align: center;
+}
+
+/* Eco Points Guidelines Tab */
+.eco-points-guide {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-top: 4px solid var(--base-clr);
+}
+
+.points-categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.points-category {
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    border-radius: 10px;
+    padding: 1.5rem;
+    border-left: 4px solid var(--base-clr);
+}
+
+.points-category h3 {
+    color: var(--base-clr);
+    margin: 0 0 1rem 0;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.points-category ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.points-category li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 0;
+    border-bottom: 1px solid rgba(62, 123, 39, 0.1);
+    font-size: 0.95rem;
+}
+
+.points-category li:last-child {
+    border-bottom: none;
+}
+
+.points-amount {
+    font-weight: bold;
+    color: var(--base-clr);
+    background: rgba(62, 123, 39, 0.1);
+    padding: 0.3rem 0.6rem;
+    border-radius: 15px;
+    font-size: 0.85rem;
+}
+
+/* Shop Tab */
+.eco-shop {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-top: 4px solid var(--base-clr);
+}
+
+/* Shop Filters */
+.shop-filters {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.filter-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.filter-group label {
+    font-weight: 600;
+    color: var(--text-dark);
+    white-space: nowrap;
+}
+
+#category-filter {
+    padding: 0.5rem 1rem;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    background-color: white;
+    color: var(--text-dark);
+    font-size: 0.95rem;
+    transition: border-color 0.3s ease;
+    min-width: 150px;
+}
+
+#category-filter:focus {
+    outline: none;
+    border-color: var(--base-clr);
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+.filter-stats {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+#rewards-count {
+    font-weight: 600;
+    color: var(--base-clr);
+}
+
+.rewards-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.reward-item {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border: 2px solid #f0f0f0;
+    transition: all 0.3s ease;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.reward-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    border-color: var(--base-clr);
+}
+
+.reward-image {
+    height: 120px;
+    background: linear-gradient(135deg, var(--accent-clr), #f0f0f0);
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+}
+
+.reward-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.reward-image img:hover {
+    transform: scale(1.05);
+}
+
+.reward-emoji {
+    font-size: 3rem;
+}
+
+.reward-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.reward-title {
+    font-weight: bold;
+    color: var(--base-clr);
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.reward-description {
+    color: #6b7280;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+    text-align: left;
+    flex: 1;
+}
+
+.description-text {
+    display: block;
+}
+
+.full-description {
+    display: none;
+}
+
+.show-more-btn {
+    background: none;
+    border: none;
+    color: var(--base-clr);
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-top: 5px;
+    padding: 2px 0;
+    text-decoration: underline;
+    transition: color 0.2s ease;
+}
+
+.show-more-btn:hover {
+    color: #2d5e3a;
+}
+
+.reward-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.reward-points, .reward-category, .reward-stock {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    color: #4a5568;
+}
+
+.reward-points {
+    color: var(--placeholder-text-clr);
+    font-weight: bold;
+    justify-content: center;
+}
+
+.reward-points i {
+    color: #F59E0B;
+}
+
+.reward-category i {
+    color: #8B5CF6;
+}
+
+.reward-stock i {
+    color: #10B981;
+}
+
+.redeem-btn {
+    border: 2px solid var(--base-clr);
+    background: transparent;
+    border-radius: 25px;
+    color: azure;
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.redeem-btn:hover:not(:disabled) {
+    background: var(--base-clr);
+    color: var(--base-clr);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(62, 123, 39, 0.3);
+}
+
+.redeem-btn:disabled {
+    background: var(--secondarybase-clr);
+    border-color: var(--secondarybase-clr);
+    color: #999;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.page-btn {
+    padding: 0.6rem 1rem;
+    background-color: var(--event-clr);
+    border: 2px solid transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+    color: var(--text-clr);
+    font-weight: 500;
+}
+
+.page-btn.active {
+    background: linear-gradient(135deg, var(--placeholder-text-clr), #7a7a7a);
+    color: white;
+    border-color: var(--placeholder-text-clr);
+}
+
+.page-btn:hover:not(.active):not(.disabled) {
+    background-color: var(--base-clr);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.page-btn.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Activities Timeline */
+.activities-timeline {
+    padding: 0 1rem;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.activity-item {
+    display: flex;
+    align-items: flex-start;
+    padding: 1rem 0;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 0.9rem;
+}
+
+.activity-item:last-child {
+    border-bottom: none;
+}
+
+.activity-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: var(--base-clr);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+}
+
+.activity-details {
+    flex: 1;
+}
+
+.activity-user {
+    font-weight: 600;
+    color: var(--base-clr);
+    margin-bottom: 0.3rem;
+}
+
+.activity-points {
+    font-size: 0.8rem;
+    color: var(--placeholder-text-clr);
+    font-weight: 600;
+    margin-top: 0.3rem;
+}
+
+/* Organization Items */
+.organization-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.org-logo {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent-clr), #f0f0f0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    color: var(--base-clr);
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .leaderboards {
+        padding: 0.5rem;
+    }
+
+    .tab-navigation {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .tab-btn {
+        min-width: auto;
+        flex: none;
+    }
+
+    .leaderboards-content {
+        flex-direction: column;
+        gap: 1.5rem;
+        width: 100%;
+    }
+
+    .leaderboards-list {
+        flex: 1;
+    }
+
+    .leaderboards-charts {
+        box-sizing:border-box;
+        min-width: auto;
+        max-width: none;
+        flex: 1;
+    }
+
+    .leaderboards-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .leaderboard {
+        height: 300px;
+    }
+
+    .points-categories {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .shop-filters {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: stretch;
+    }
+    
+    .filter-group {
+        justify-content: center;
+    }
+    
+    .filter-stats {
+        text-align: center;
+    }
+
+    .rewards-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .chart-group {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .chart-group .chart-wrapper {
+        min-width: 100%;
+    }
+
+    .chart-wrapper {
+        height: 250px;
+    }
+
+    .reward-image {
+        height: 100px;
+        font-size: 2.5rem;
+    }
+
+    .pagination {
+        gap: 0.3rem;
+    }
+
+    .page-btn {
+        padding: 0.5rem 0.8rem;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .leaderboards h1 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .tab-btn {
+        padding: 0.8rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .user-points {
+        padding: 1rem;
+    }
+
+    .points-value {
+        font-size: 1.5rem;
+    }
+
+    .rewards-grid {
+        grid-template-columns: 1fr;
+        gap: 0.8rem;
+    }
+
+    .reward-item {
+        padding: 1rem;
+    }
+
+    .reward-image {
+        height: 80px;
+        font-size: 2rem;
+    }
+
+    .reward-title {
+        font-size: 0.95rem;
+    }
+
+    .reward-points {
+        font-size: 0.8rem;
+    }
+
+    .redeem-btn {
+        padding: 0.6rem;
+        font-size: 0.8rem;
+    }
+
+    .filter-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+    }
+
+    .leaderboard li {
+        padding: 0.8rem 1rem;
+        font-size: 0.85rem;
+    }
+
+    .rank {
+        min-width: 1.5rem;
+        font-size: 1rem;
+    }
+}
+
+/* Reward Image Modal Styles */
+.reward-image-modal {
+    display: none;
+    position: fixed;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    animation: fadeIn 0.3s ease;
+}
+
+.reward-modal-content {
+    background-color: white;
+    margin: 5% auto;
+    border-radius: 12px;
+    max-width: 80vw;
+    max-height: 80vh;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    animation: slideInDown 0.3s ease;
+}
+
+/* Reward Details Modal Specific Styles */
+.reward-details-modal-content {
+    max-width: 90vw;
+    max-height: 90vh;
+    width: 800px;
+}
+
+.reward-details-modal-body {
+    padding: 25px;
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+.reward-details-container {
+    display: flex;
+    gap: 25px;
+    align-items: flex-start;
+}
+
+.reward-modal-image {
+    flex-shrink: 0;
+    width: 200px;
+    height: 200px;
+    border-radius: 12px;
+    overflow: hidden;
+    background: linear-gradient(135deg, var(--accent-clr), #f0f0f0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.reward-modal-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.reward-modal-image img:hover {
+    transform: scale(1.05);
+}
+
+.reward-modal-emoji {
+    font-size: 4rem;
+}
+
+.reward-modal-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.reward-modal-info h4 {
+    color: var(--base-clr);
+    font-size: 1.8rem;
+    margin: 0 0 15px 0;
+    font-weight: 700;
+}
+
+.reward-modal-description {
+    margin-bottom: 20px;
+}
+
+.reward-modal-description p {
+    color: #4a5568;
+    line-height: 1.6;
+    font-size: 1rem;
+    margin: 0;
+}
+
+.reward-modal-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.reward-modal-points,
+.reward-modal-category,
+.reward-modal-stock {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1rem;
+    color: #2d3748;
+    font-weight: 600;
+}
+
+.reward-modal-points {
+    color: var(--placeholder-text-clr);
+    font-size: 1.2rem;
+}
+
+.reward-modal-points i {
+    color: #F59E0B;
+    font-size: 1.3rem;
+}
+
+.reward-modal-category i {
+    color: #8B5CF6;
+}
+
+.reward-modal-stock i {
+    color: #10B981;
+}
+
+.modal-redeem-btn {
+    align-self: flex-start;
+    min-width: 150px;
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.reward-modal-header {
+    background: linear-gradient(135deg, var(--base-clr), #4a8b5c);
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.reward-modal-header h3 {
+    margin: 0;
+    font-size: 1.3rem;
+}
+
+.reward-modal-close {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.8rem;
+    cursor: pointer;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background-color 0.2s ease;
+}
+
+.reward-modal-close:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.reward-modal-body {
+    padding: 20px;
+    text-align: center;
+}
+
+.reward-modal-body img {
+    max-width: 100%;
+    max-height: 60vh;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive design for modal */
+@media (max-width: 768px) {
+    .reward-details-modal-content {
+        width: 95vw;
+        margin: 2% auto;
+    }
+    
+    .reward-details-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .reward-modal-image {
+        width: 150px;
+        height: 150px;
+        align-self: center;
+    }
+    
+    .reward-modal-emoji {
+        font-size: 3rem;
+    }
+    
+    .reward-modal-info h4 {
+        font-size: 1.5rem;
+    }
+    
+    .modal-redeem-btn {
+        align-self: center;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideInDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Additional responsive breakpoints for rewards grid */
+@media (min-width: 1200px) {
+    .rewards-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1199px) {
+    .rewards-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+/* Rewards Modal Responsive Styles */
+@media screen and (max-width: 768px) {
+    .rewards-modal-content {
+        width: 95%;
+        margin: 5% auto;
+        max-height: 90vh;
+    }
+    
+    .rewards-modal-header {
+        padding: 20px;
+    }
+    
+    .rewards-modal-header h2 {
+        font-size: 1.4rem;
+    }
+    
+    .rewards-modal-body {
+        padding: 15px;
+    }
+    
+    .reward-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    
+    .reward-details {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .claim-single-btn, .claimed-badge {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .claim-all-btn {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .claim-rewards-btn {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .claim-rewards-btn i {
+        font-size: 1.3rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .points-header {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+    
+    .rewards-modal-header h2 {
+        font-size: 1.2rem;
+    }
+    
+    .rewards-section h3 {
+        font-size: 1.2rem;
+    }
+    
+    .reward-card {
+        padding: 15px;
+    }
+    
+    .reward-cycle {
+        font-size: 1rem;
+    }
+    
+    .reward-points {
+        font-size: 1.1rem;
+    }
+}
+
+/* Cycle Rewards Section Styles */
+.cycle-rewards-section {
+    padding: 1.5rem;
+    background: linear-gradient(135deg, #f8f9fa, #ffffff);
+    border-radius: 12px;
+    border: 2px solid #e9ecef;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.cycle-rewards-section + .cycle-rewards-section {
+    margin-top: 1.5rem;
+}
+
+.cycle-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.cycle-badge {
+    background: linear-gradient(135deg, #4CAF50, #45a049);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+}
+
+.cycle-badge i {
+    font-size: 1.4rem;
+}
+
+.cycle-dates {
+    color: var(--base-clr);
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.6rem 1.2rem;
+    background: rgba(44, 85, 48, 0.1);
+    border-radius: 20px;
+}
+
+.cycle-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+    width: 100%;
+}
+
+.cycle-leaderboard {
+    background: white;
+    border: 1px solid #dee2e6;
+}
+
+.cycle-leaderboard h2 {
+    color: var(--base-clr);
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.cycle-subtitle {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+}
+
+.cycle-list-item {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    margin-bottom: 0.8rem;
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    gap: 1rem;
+}
+
+.cycle-list-item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, #e9ecef, #dee2e6);
+}
+
+.cycle-rank {
+    font-weight: bold;
+    color: var(--base-clr);
+    min-width: 50px;
+    font-size: 1.1rem;
+}
+
+.cycle-name {
+    flex: 1;
+    font-weight: 600;
+    color: #333;
+}
+
+.cycle-points {
+    color: #f39c12;
+    font-weight: bold;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.cycle-rewards-info {
+    background: linear-gradient(135deg, #fff9e6, #ffffff);
+    border: 2px solid #f39c12;
+}
+
+.cycle-rewards-info h2 {
+    color: #f39c12;
+}
+
+.rewards-breakdown {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.reward-tier {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    background: white;
+    border-radius: 10px;
+    border-left: 4px solid #95a5a6;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.reward-tier:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+}
+
+.reward-tier.tier-gold {
+    border-left-color: #FFD700;
+    background: linear-gradient(135deg, #fffbf0, #ffffff);
+}
+
+.reward-tier.tier-silver {
+    border-left-color: #C0C0C0;
+    background: linear-gradient(135deg, #f8f8f8, #ffffff);
+}
+
+.reward-tier.tier-bronze {
+    border-left-color: #CD7F32;
+    background: linear-gradient(135deg, #fff5eb, #ffffff);
+}
+
+.tier-rank {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--base-clr);
+}
+
+.tier-points {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #f39c12;
+}
+
+.cycle-note {
+    background: linear-gradient(135deg, #e8f5e9, #ffffff);
+    padding: 1rem;
+    border-radius: 10px;
+    border-left: 4px solid #4CAF50;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.cycle-note i {
+    color: #4CAF50;
+    font-size: 1.2rem;
+    margin-top: 2px;
+}
+
+.cycle-note p {
+    margin: 0;
+    color: #2c5530;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* Responsive for cycle sections */
+@media screen and (max-width: 768px) {
+    .cycle-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .cycle-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .cycle-badge {
+        font-size: 1rem;
+        padding: 0.7rem 1.2rem;
+    }
+    
+    .cycle-list-item {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+    
+    .cycle-name {
+        width: 100%;
+        order: 3;
+    }
+    
+    .cycle-points {
+        width: 100%;
+        order: 4;
+        justify-content: flex-end;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .cycle-rewards-section {
+        padding: 1rem;
+    }
+    
+    .cycle-grid {
+        grid-template-columns: 1fr;
+        gap: 0.85rem;
+    }
+    
+    .reward-tier {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    
+    .tier-rank, .tier-points {
+        font-size: 1rem;
+    }
+}
+
+/* ========================================
+   IMPROVED LAYOUT OPTIMIZATIONS
+   ======================================== */
+
+/* Compact Cycle Section Styling */
+.leaderboards-cycles .cycle-rewards-section + .cycle-rewards-section {
+    margin-top: 1.5rem;
+}
+
+.cycle-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+    width: 100%;
+}
+
+.cycle-leaderboard {
+    background: white;
+    border-radius: 10px;
+    padding: 1.25rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.cycle-leaderboard h2 {
+    font-size: 1rem;
+    margin: 0 0 0.5rem 0;
+    font-weight: 600;
+    color: var(--base-clr);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.cycle-subtitle {
+    font-size: 0.8rem;
+    color: #6b7280;
+    margin: 0 0 0.75rem 0;
+    line-height: 1.3;
+}
+
+.cycle-list-item {
+    font-size: 0.875rem;
+    padding: 0.65rem 0.85rem;
+}
+
+.cycle-list-item + .cycle-list-item {
+    margin-top: 0.5rem;
+}
+
+.cycle-name {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.cycle-rewards-info {
+    background: linear-gradient(135deg, #fff9e6, #ffffff);
+    border: 2px solid #f39c12;
+    border-radius: 10px;
+    padding: 1.25rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.cycle-rewards-info h2 {
+    font-size: 1rem;
+    margin: 0 0 0.5rem 0;
+    font-weight: 600;
+    color: #f39c12;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.rewards-breakdown {
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+    padding-top: 0.75rem;
+    flex: 1;
+}
+
+.reward-tier {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.65rem 0.85rem;
+    background: white;
+    border-radius: 8px;
+    border-left: 4px solid #95a5a6;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: all 0.2s ease;
+    font-size: 0.875rem;
+}
+
+.reward-tier:hover {
+    transform: scale(1.02);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.tier-rank {
+    font-weight: 700;
+    font-size: 0.95rem;
+}
+
+.tier-points {
+    font-weight: 700;
+    font-size: 0.95rem;
+}
+
+.cycle-note {
+    background: linear-gradient(135deg, #e8f5e9, #ffffff);
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    border-left: 4px solid #4CAF50;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.65rem;
+    margin-top: auto;
+}
+
+.cycle-note i {
+    color: #4CAF50;
+    font-size: 1rem;
+    margin-top: 0.15rem;
+    flex-shrink: 0;
+}
+
+.cycle-note p {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #2d5e3a;
+    line-height: 1.4;
+}
+
+.cycle-header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid #e9ecef;
+}
+
+.cycle-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: linear-gradient(135deg, #4CAF50, #45a049);
+    color: white;
+    padding: 0.6rem 1rem;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    box-shadow: 0 3px 10px rgba(76, 175, 80, 0.3);
+    align-self: flex-start;
+}
+
+.cycle-badge i {
+    font-size: 1rem;
+}
+
+.cycle-dates {
+    font-size: 0.8rem;
+    color: #6b7280;
+    font-weight: 500;
+    background: white;
+    padding: 0.4rem 0.85rem;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    align-self: flex-start;
+}
+
+/* Graph Container Full Width */
+.graph-container {
+    box-sizing:border-box;
+    width: 100%;
+}
+
+.chart-group {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.chart-group .chart-wrapper {
+    flex: 1;
+    min-width: 300px;
+}
+
+/* Responsive Layout Improvements */
+@media screen and (max-width: 1024px) {
+    .leaderboards-content {
+        gap: 1.25rem;
+    }
+    
+    .chart-group {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    .chart-group .chart-wrapper {
+        min-width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .leaderboards h1 {
+        font-size: 1.5rem;
+    }
+    
+    .leaderboards-content {
+        gap: 1.25rem;
+    }
+    
+    .leaderboards-grid,
+    .cycle-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .leaderboard {
+        height: 300px;
+    }
+    
+    .leaderboard h2 {
+        font-size: 1rem;
+        padding: 1rem;
+    }
+    
+    .user-points {
+        padding: 1rem 1.25rem;
+    }
+    
+    .points-value {
+        font-size: 2rem;
+    }
+    
+    .cycle-rewards-section {
+        padding: 1.25rem;
+    }
+    
+    .cycle-leaderboard,
+    .cycle-rewards-info {
+        padding: 1rem;
+    }
+    
+    .cycle-header {
+        gap: 0.5rem;
+    }
+    
+    .cycle-badge {
+        font-size: 0.85rem;
+        padding: 0.5rem 0.85rem;
+    }
+    
+    .cycle-dates {
+        font-size: 0.75rem;
+        padding: 0.35rem 0.7rem;
+    }
+    
+    .cycle-list-item {
+        font-size: 0.85rem;
+        padding: 0.55rem 0.7rem;
+    }
+    
+    .reward-tier {
+        padding: 0.6rem 0.75rem;
+        font-size: 0.85rem;
+    }
+    
+    .tier-rank,
+    .tier-points {
+        font-size: 0.875rem;
+    }
+    
+    .cycle-note {
+        padding: 0.65rem 0.85rem;
+    }
+    
+    .cycle-note p {
+        font-size: 0.75rem;
+    }
+    
+    .chart-group {
+        flex-direction: column;
+        gap: 1.25rem;
+    }
+    
+    .chart-group .chart-wrapper {
+        min-width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .leaderboards {
+        padding: 1rem 0.75rem;
+    }
+    
+    .leaderboards h1 {
+        font-size: 1.3rem;
+    }
+    
+    .leaderboards-content {
+        gap: 1rem;
+    }
+    
+    .leaderboards-grid,
+    .cycle-grid {
+        grid-template-columns: 1fr;
+        gap: 0.85rem;
+    }
+    
+    .leaderboard {
+        height: 280px;
+    }
+    
+    .tab-navigation {
+        gap: 0.25rem;
+        padding: 0.4rem;
+    }
+    
+    .tab-btn {
+        min-width: 110px;
+        padding: 0.75rem 0.85rem;
+        font-size: 0.85rem;
+    }
+    
+    .filter-btn {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.8rem;
+    }
+    
+    .user-points {
+        padding: 0.85rem 1rem;
+    }
+    
+    .user-points h2 {
+        font-size: 1rem;
+    }
+    
+    .points-value {
+        font-size: 1.75rem;
+    }
+    
+    .cycle-rewards-section {
+        padding: 1rem;
+    }
+    
+    .cycle-leaderboard,
+    .cycle-rewards-info {
+        padding: 0.85rem;
+    }
+    
+    .cycle-badge {
+        font-size: 0.8rem;
+        padding: 0.45rem 0.75rem;
+    }
+    
+    .cycle-dates {
+        font-size: 0.7rem;
+        padding: 0.3rem 0.6rem;
+    }
+    
+    .cycle-list-item {
+        padding: 0.5rem 0.65rem;
+        font-size: 0.8rem;
+    }
+    
+    .cycle-list-item + .cycle-list-item {
+        margin-top: 0.4rem;
+    }
+    
+    .reward-tier {
+        padding: 0.55rem 0.7rem;
+        font-size: 0.8rem;
+    }
+    
+    .tier-rank,
+    .tier-points {
+        font-size: 0.825rem;
+    }
+    
+    .cycle-note {
+        padding: 0.6rem 0.75rem;
+    }
+    
+    .cycle-note p {
+        font-size: 0.7rem;
+    }
+    
+    .graph-container {
+        padding: 1rem;
+    }
+    
+    .chart-group {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .chart-group .chart-wrapper {
+        min-width: 100%;
+    }
+}
+

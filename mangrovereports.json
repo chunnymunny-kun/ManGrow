@@ -1,0 +1,805 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "report_id": 1,
+                "reporter_id": 16,
+                "report_type": "Mangrove Data Report",
+                "report_date": "2025-07-03 18:14:18",
+                "species": "Avicennia Marina",
+                "area_no": "ABU-03",
+                "city_municipality": "Abucay",
+                "mangrove_status": "Healthy",
+                "area_m2": 100,
+                "remarks": "The bungalon are growing nicely without issues.",
+                "created_at": "2025-07-03 18:14:18",
+                "images": [
+                    "uploads\/mangrove_reports\/686657fa76122_ab88597160a4c144.webp"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.541856,
+                    14.735489
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "report_id": 2,
+                "reporter_id": 12,
+                "report_type": "Mangrove Data Report",
+                "report_date": "2025-07-04 09:43:41",
+                "species": "Rhizophora Mucronata",
+                "area_no": "ABU-03",
+                "city_municipality": "Abucay",
+                "mangrove_status": "Healthy",
+                "area_m2": 100,
+                "remarks": "The mangroves are healthy.",
+                "created_at": "2025-07-04 09:43:41",
+                "images": [
+                    "uploads\/mangrove_reports\/686731cd3b7c1_e192f6cb16fd79b3.webp",
+                    "uploads\/mangrove_reports\/686731cd3e431_5542845efcf3f30e.jpg"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.541461,
+                    14.736619
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "report_id": 3,
+                "reporter_id": 12,
+                "report_type": "Mangrove Data Report",
+                "report_date": "2025-07-04 14:30:44",
+                "species": "Avicennia Marina",
+                "area_no": "ABU_BAL-01",
+                "city_municipality": "Abucay",
+                "mangrove_status": "Healthy",
+                "area_m2": 100,
+                "remarks": "The mangroves are healthy.",
+                "created_at": "2025-07-04 14:30:44",
+                "images": [
+                    "uploads\/mangrove_reports\/6867751465509_b25370c9e04ab696.jpg",
+                    "uploads\/mangrove_reports\/68677514678b2_b4d39d69cfa56a2a.jpg",
+                    "uploads\/mangrove_reports\/686775146c540_102f128eba21395d.jpg"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.552217,
+                    14.707939
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "report_id": 22,
+                "reporter_id": 19,
+                "report_type": "Mangrove Data Report",
+                "report_date": "2025-07-06 22:10:23",
+                "species": "Rhizophora Mucronata",
+                "area_no": "ABU-04",
+                "city_municipality": "Abucay",
+                "mangrove_status": "Needs Attention",
+                "area_m2": 100,
+                "remarks": "We added 3 Bakawan babae near this area.",
+                "created_at": "2025-07-06 22:10:23",
+                "images": [
+                    "uploads\/mangrove_reports\/686a83cf92098_1422aa141aaf0028.jpg"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.544267,
+                    14.726565
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "report_id": 24,
+                "reporter_id": null,
+                "report_type": "Mangrove Data Report",
+                "report_date": "2025-07-07 14:58:12",
+                "species": "Rhizophora Mucronata",
+                "area_no": "ABU-03",
+                "city_municipality": "Abucay",
+                "mangrove_status": "Healthy",
+                "area_m2": 100,
+                "remarks": "",
+                "created_at": "2025-07-07 14:58:12",
+                "images": [
+                    "uploads\/mangrove_reports\/686b7004bd55f_18ce84ccf4d270fb.webp"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.542156,
+                    14.735416
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "report_id": 25,
+                "reporter_id": null,
+                "report_type": "Mangrove Data Report",
+                "report_date": "2025-07-07 16:43:43",
+                "species": "Rhizophora Apiculata",
+                "area_no": "ABU-06",
+                "city_municipality": "Abucay",
+                "mangrove_status": "Healthy",
+                "area_m2": 100,
+                "remarks": "Some trees are growing fast, there are no interruptions around the area.",
+                "created_at": "2025-07-07 16:43:43",
+                "images": [
+                    "uploads\/mangrove_reports\/686b88bfea1b7_c41e351f23a240a2.jpg"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.548735,
+                    14.713833
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "report_id": 27,
+                "reporter_id": null,
+                "report_type": "Mangrove Data Report",
+                "report_date": "2025-07-07 17:41:43",
+                "species": "Avicennia Marina",
+                "area_no": null,
+                "city_municipality": "",
+                "mangrove_status": "Healthy",
+                "area_m2": 100,
+                "remarks": "No major observations.",
+                "created_at": "2025-07-07 17:41:43",
+                "images": [
+                    "uploads\/mangrove_reports\/686b96577461a_359f8b609acb77df.webp"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    121.061376,
+                    14.532608
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "report_id": 28,
+                "reporter_id": 12,
+                "report_type": "Mangrove Data Report",
+                "report_date": "2025-07-07 17:44:08",
+                "species": "Rhizophora Apiculata",
+                "area_no": null,
+                "city_municipality": "",
+                "mangrove_status": "Healthy",
+                "area_m2": 100,
+                "remarks": "There were also bungalon trees growing around the area.",
+                "created_at": "2025-07-07 17:44:08",
+                "images": [
+                    "uploads\/mangrove_reports\/686b96e8b97b9_4b4a6f97c5efb2a3.jpg",
+                    "uploads\/mangrove_reports\/686b96e8bcd3c_5c00b23adeea0803.webp"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    121.061376,
+                    14.532608
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "report_id": 31,
+                "reporter_id": null,
+                "report_type": "Mangrove Data Report",
+                "report_date": "2025-07-07 18:00:12",
+                "species": "Rhizophora Mucronata",
+                "area_no": null,
+                "city_municipality": "",
+                "mangrove_status": "Needs Attention",
+                "area_m2": 100,
+                "remarks": "The trees are still small even after 4 months have passed.",
+                "created_at": "2025-07-07 18:00:12",
+                "images": [
+                    "uploads\/mangrove_reports\/686b9aac21e78_4e1a698e52e7b75d.jpg"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.551171,
+                    14.677018
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "report_id": 32,
+                "reporter_id": 19,
+                "report_type": "Mangrove Data Report",
+                "report_date": "2025-07-07 18:03:29",
+                "species": "Rhizophora Apiculata",
+                "area_no": "ABU-04",
+                "city_municipality": "Abucay",
+                "mangrove_status": "Healthy",
+                "area_m2": 100,
+                "remarks": "The trees have no issues growing.",
+                "created_at": "2025-07-07 18:03:29",
+                "images": [
+                    "uploads\/mangrove_reports\/686b9b711c81a_d6eb28f8333a5e43.jpg"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.545135,
+                    14.72649
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "report_id": 33,
+                "reporter_id": 12,
+                "report_type": "Mangrove Data Report",
+                "report_date": "2025-07-08 11:35:46",
+                "species": "Rhizophora Apiculata",
+                "area_no": null,
+                "city_municipality": "",
+                "mangrove_status": "Needs Attention",
+                "area_m2": 100,
+                "remarks": "These mangroves newly planted in this area were healthy but still need monitoring and care.",
+                "created_at": "2025-07-08 11:35:46",
+                "images": [
+                    "uploads\/mangrove_reports\/686c9212c7d3f_b1b9b486282a4b5a.jpg",
+                    "uploads\/mangrove_reports\/686c9212c8342_d86862a32e0cfa06.webp"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.563302,
+                    14.680064
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "report_id": 34,
+                "reporter_id": 25,
+                "report_type": "Mangrove Data Report",
+                "report_date": "2025-07-08 13:35:58",
+                "species": "Avicennia Marina",
+                "area_no": "ABU-01",
+                "city_municipality": "Abucay",
+                "mangrove_status": "Healthy",
+                "area_m2": 100,
+                "remarks": "The trees grow nicely.",
+                "created_at": "2025-07-08 13:35:58",
+                "images": [
+                    "uploads\/mangrove_reports\/686cae3e6e7e8_6699a53a227edffb.webp"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.563302,
+                    14.680064
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "report_id": 35,
+                "reporter_id": 25,
+                "report_type": "Mangrove Data Report",
+                "report_date": "2025-07-09 01:45:16",
+                "species": "Avicennia Marina",
+                "area_no": "",
+                "city_municipality": "",
+                "mangrove_status": "Needs Attention",
+                "area_m2": 100,
+                "remarks": "No major issues with the observed mangroves.",
+                "created_at": "2025-07-09 01:45:16",
+                "images": [
+                    "uploads\/mangrove_reports\/686d592c31509_f9d182393da5b84d.webp"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.563302,
+                    14.680064
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "report_id": 36,
+                "reporter_id": 25,
+                "report_type": "Mangrove Data Report",
+                "report_date": "2025-07-11 14:44:15",
+                "species": "Rhizophora Apiculata",
+                "area_no": "ABU-02",
+                "city_municipality": "Abucay",
+                "mangrove_status": "Healthy",
+                "area_m2": 100,
+                "remarks": "This report says that the mangroves are healthy.",
+                "created_at": "2025-07-11 14:44:15",
+                "images": []
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.563302,
+                    14.680064
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "report_id": 37,
+                "reporter_id": 15,
+                "report_type": "Mangrove Data Report",
+                "report_date": "2025-08-03 17:01:15",
+                "species": "Avicennia Marina",
+                "area_no": "ABU_BAL-01",
+                "city_municipality": "Balanga",
+                "mangrove_status": "Healthy",
+                "area_m2": 100,
+                "remarks": "These mangroves are healthy.",
+                "created_at": "2025-08-03 17:01:15",
+                "images": [
+                    "uploads\/mangrove_reports\/688f255b81cea_ac2823b6262ae731.jpg",
+                    "uploads\/mangrove_reports\/688f255b8267e_f4a6dc7a9be082df.jpg",
+                    "uploads\/mangrove_reports\/688f255b82e45_cd9e921bd754e162.webp"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.554129,
+                    14.702603
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "report_id": 38,
+                "reporter_id": 15,
+                "report_type": "Mangrove Data Report",
+                "report_date": "2025-08-18T21:43",
+                "species": "Rhizophora Apiculata",
+                "area_no": "ABU-02",
+                "city_municipality": "Abucay",
+                "barangays": "Laon, Mabatang, Salian, Wawa",
+                "address": "Lati, Poblacion, Abucay, Bataan 2114, Philippines",
+                "mangrove_status": "Healthy",
+                "area_m2": 100,
+                "remarks": "This is a trial report",
+                "created_at": "2025-08-18 21:56:32",
+                "images": [
+                    "uploads\/mangrove_reports\/68a3311013a81_42f5e6782f05d046.webp"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.546856,
+                    14.731764
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "report_id": 39,
+                "reporter_id": null,
+                "report_type": "Mangrove Data Report",
+                "report_date": "2025-08-18T21:59",
+                "species": "Rhizophora Apiculata",
+                "area_no": "ABU-02",
+                "city_municipality": "Abucay",
+                "barangays": "Laon, Mabatang, Salian, Wawa",
+                "address": "Lati, Poblacion, Abucay, Bataan 2114, Philippines",
+                "mangrove_status": "Healthy",
+                "area_m2": 100,
+                "remarks": "Try again",
+                "created_at": "2025-08-18 22:09:07",
+                "images": [
+                    "uploads\/mangrove_reports\/68a33403bfc7e_9483fa480cf1bcc8.jpg",
+                    "uploads\/mangrove_reports\/68a33403c6231_5236f0b59d5745dc.jpg",
+                    "uploads\/mangrove_reports\/68a33403c8329_ae1d5074e38849e8.jpg"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.546595,
+                    14.731224
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "report_id": 40,
+                "reporter_id": 15,
+                "report_type": "Mangrove Data Report",
+                "report_date": "2025-08-28T15:08",
+                "species": "Rhizophora Mucronata",
+                "area_no": "ABU-05",
+                "city_municipality": "Abucay",
+                "barangays": "Wawa",
+                "address": "Lati, Poblacion, Abucay, Bataan 2114, Philippines",
+                "mangrove_status": "Needs Attention",
+                "area_m2": 100,
+                "remarks": "There are few mangroves sprouting from the area than usual, suggesting attention to check if there are factors affecting this cause.",
+                "created_at": "2025-08-28 15:12:16",
+                "images": [
+                    "uploads\/mangrove_reports\/68b001506b5ce_647982dd237f03c3.webp"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.547657,
+                    14.719366
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "report_id": 41,
+                "reporter_id": 17,
+                "report_type": "Mangrove Data Report",
+                "report_date": "2025-08-29T12:56",
+                "species": "Sonneratia Alba",
+                "area_no": "ABU_BAL-01",
+                "city_municipality": "Balanga",
+                "barangays": "Tortugas",
+                "address": "Balanga, Bataan 2101, Philippines",
+                "mangrove_status": "Growing",
+                "area_m2": 100,
+                "remarks": "The saplings are growing as expected. Still needs time to actually grow into mature mangroves.",
+                "created_at": "2025-08-29 12:57:55",
+                "images": [
+                    "uploads\/mangrove_reports\/68b133538c031_f39fabbcf30be062.jpg",
+                    "uploads\/mangrove_reports\/68b1335392c0f_5ecd5c67e4e2a121.png"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.55513,
+                    14.702916
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "report_id": 42,
+                "reporter_id": 17,
+                "report_type": "Mangrove Data Report",
+                "report_date": "2025-08-29T12:58",
+                "species": "Rhizophora Apiculata",
+                "area_no": "",
+                "city_municipality": "Balanga",
+                "barangays": "Pto. Rivas Ibaba, Tortugas",
+                "address": "Anacleto del Rosario Street, Balanga, Bataan 2100, Philippines",
+                "mangrove_status": "Healthy",
+                "area_m2": 300,
+                "remarks": "The mangroves are healthy and there\\'s no signs of issues.",
+                "created_at": "2025-08-29 13:00:15",
+                "images": [
+                    "uploads\/mangrove_reports\/68b133df93e99_84ce1edf997837a5.jpg",
+                    "uploads\/mangrove_reports\/68b133df95cc2_4883e2280966c1d1.webp"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.56041,
+                    14.701318
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "report_id": 43,
+                "reporter_id": 30,
+                "report_type": "Mangrove Data Report",
+                "report_date": "2025-08-29T13:00",
+                "species": "Rhizophora Mucronata",
+                "area_no": "ABU_BAL-01",
+                "city_municipality": "Balanga",
+                "barangays": "Tortugas",
+                "address": "Balanga, Bataan 2101, Philippines",
+                "mangrove_status": "Healthy",
+                "area_m2": 200,
+                "remarks": "Lumalaki ang mga bakawang babae malapit sa loob ng gubat",
+                "created_at": "2025-08-29 13:02:37",
+                "images": [
+                    "uploads\/mangrove_reports\/68b1346d0edaa_f558e8ad87ee7b0d.jpg",
+                    "uploads\/mangrove_reports\/68b1346d0f2f5_a420041ef0a1cba1.png",
+                    "uploads\/mangrove_reports\/68b1346d0f967_d22195addff84ccc.jpg"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.554336,
+                    14.702293
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "report_id": 44,
+                "reporter_id": 30,
+                "report_type": "Mangrove Data Report",
+                "report_date": "2025-08-29T13:02",
+                "species": "Avicennia Marina",
+                "area_no": "ABU_BAL-01",
+                "city_municipality": "Balanga",
+                "barangays": "Tortugas",
+                "address": "Balanga, Bataan 2101, Philippines",
+                "mangrove_status": "Damaged",
+                "area_m2": 100,
+                "remarks": "Kamakalyan ay nagkaroon dito ng sunog kaya ang mga mangrove ay naapektuhan, maraming mangrove ang nalapnos, kabilang na dito ang mga bungalon malapit sa dagat",
+                "created_at": "2025-08-29 13:04:45",
+                "images": [
+                    "uploads\/mangrove_reports\/68b134ed4de17_c14b29bffcc3972c.jfif"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.554851,
+                    14.703933
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "report_id": 45,
+                "reporter_id": null,
+                "report_type": "Mangrove Data Report",
+                "report_date": "2025-08-29T13:48",
+                "species": "Rhizophora Apiculata",
+                "area_no": "ABU_BAL-01",
+                "city_municipality": "Balanga",
+                "barangays": "Tortugas",
+                "address": "Balanga, Bataan 2101, Philippines",
+                "mangrove_status": "Dead",
+                "area_m2": 1000,
+                "remarks": "All mangroves around the area vanished without a trace.",
+                "created_at": "2025-08-29 13:49:34",
+                "images": [
+                    "uploads\/mangrove_reports\/68b13f6e384e1_88ff8b8ad21504ea.jfif"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.554508,
+                    14.702501
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "report_id": 46,
+                "reporter_id": 17,
+                "report_type": "Mangrove Data Report",
+                "report_date": "2025-08-29T16:21",
+                "species": "Rhizophora Apiculata",
+                "area_no": "ABU_BAL-01",
+                "city_municipality": "Balanga",
+                "barangays": "Tortugas",
+                "address": "Balanga, Bataan 2101, Philippines",
+                "mangrove_status": "Healthy",
+                "area_m2": 200,
+                "remarks": "The mangroves are healthy.",
+                "created_at": "2025-08-29 16:22:51",
+                "images": [
+                    "uploads\/mangrove_reports\/68b1635c01788_e5efa5933c56c7ad.png",
+                    "uploads\/mangrove_reports\/68b1635c04138_93c8e73e54279591.jpg",
+                    "uploads\/mangrove_reports\/68b1635c04e9b_7efeb0809af7d7df.jpg"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.553901,
+                    14.703416
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "report_id": 47,
+                "reporter_id": 15,
+                "report_type": "Mangrove Data Report",
+                "report_date": "2025-09-04T23:12",
+                "species": "Rhizophora Apiculata, Rhizophora Mucronata, Avicennia Marina",
+                "area_no": "ABU-06",
+                "city_municipality": "Abucay",
+                "barangays": "Capitangan",
+                "address": "Lati, Poblacion, Abucay, Bataan 2114, Philippines",
+                "mangrove_status": "Healthy",
+                "area_m2": 100,
+                "remarks": "The mangroves are thriving and growing healthy despite the recent mangrove incident that happened in the area.",
+                "created_at": "2025-09-04 23:13:21",
+                "images": [
+                    "uploads\/mangrove_reports\/68b9ac912f950_07ad2a5fd92efeb9.png",
+                    "uploads\/mangrove_reports\/68b9ac9130dcd_b7280dff4fac5fe8.webp"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.547686,
+                    14.714545
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "report_id": 48,
+                "reporter_id": 15,
+                "report_type": "Mangrove Data Report",
+                "report_date": "2025-09-05T01:56",
+                "species": "Rhizophora Apiculata, Avicennia Marina, Sonneratia Alba",
+                "area_no": "ABU-06",
+                "city_municipality": "Abucay",
+                "barangays": "Capitangan",
+                "address": "Lati, Poblacion, Abucay, Bataan 2114, Philippines",
+                "mangrove_status": "Growing",
+                "area_m2": 100,
+                "remarks": "Nothing worth mentioning aside from the fact that the mangroves are growing steadily.",
+                "created_at": "2025-09-05 01:57:21",
+                "images": [
+                    "uploads\/mangrove_reports\/68b9d30109b07_c22c53eed8586699.jpg",
+                    "uploads\/mangrove_reports\/68b9d3011464e_d1f3c724f0a65741.jpg"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.54822,
+                    14.713732
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "report_id": 49,
+                "reporter_id": 15,
+                "report_type": "Mangrove Data Report",
+                "report_date": "2025-10-06T12:58",
+                "species": "Rhizophora Apiculata, Rhizophora Mucronata",
+                "area_no": "ABU-04",
+                "city_municipality": "Abucay",
+                "barangays": "Wawa",
+                "address": "Old National Road, Poblacion, Abucay, Bataan 2114, Philippines",
+                "mangrove_status": "Healthy",
+                "area_m2": 100,
+                "remarks": "The mangroves are healthy.",
+                "created_at": "2025-10-06 13:04:22",
+                "images": [
+                    "uploads\/mangrove_reports\/68e34dd6487af_d21b6593a27aff04.avif",
+                    "uploads\/mangrove_reports\/68e34dd648dd1_2c3fd808a3c49508.jfif",
+                    "uploads\/mangrove_reports\/68e34dd649790_c88da536c2841774.jpg"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.539259,
+                    14.727038
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "report_id": 50,
+                "reporter_id": 15,
+                "report_type": "Mangrove Data Report",
+                "report_date": "2025-10-06T14:20",
+                "species": "Sonneratia Alba",
+                "area_no": "ABU-04",
+                "city_municipality": "Abucay",
+                "barangays": "Wawa",
+                "address": "Abucay, Bataan 2114, Philippines",
+                "mangrove_status": "Healthy",
+                "area_m2": 200,
+                "remarks": "Mangroves are healthy.",
+                "created_at": "2025-10-06 14:23:52",
+                "images": [
+                    "uploads\/mangrove_reports\/68e360780297e_8e308229736aabc3.jpg",
+                    "uploads\/mangrove_reports\/68e3607802fc6_48bd88107bb1ea4b.jpg"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.537014,
+                    14.726949
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "report_id": 51,
+                "reporter_id": 15,
+                "report_type": "Mangrove Data Report",
+                "report_date": "2025-10-06T21:08",
+                "species": "Avicennia Marina",
+                "area_no": "ABU-05",
+                "city_municipality": "Abucay",
+                "barangays": "Wawa",
+                "address": "Lati, Poblacion, Abucay, Bataan 2114, Philippines",
+                "mangrove_status": "Healthy",
+                "area_m2": 100,
+                "remarks": "The mangroves are healthy.",
+                "created_at": "2025-10-06 21:09:43",
+                "images": [
+                    "uploads\/mangrove_reports\/68e3bf974b933_0d557d6f0b4d3772.avif"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.546691,
+                    14.725455
+                ]
+            }
+        }
+    ]
+}

@@ -1,0 +1,518 @@
+/* ====================================
+   IMPROVED EVENT LOCATION SYSTEM STYLES
+   Enhanced Map Modal, Toggle, & Address Matching
+   ==================================== */
+
+/* ====================================
+   MAP MODAL ENHANCEMENTS
+   ==================================== */
+
+.map-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #e0e0e0;
+    margin-bottom: 15px;
+}
+
+.map-modal-header h3 {
+    margin: 0;
+    color: #123524;
+    font-size: 1.3em;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.map-search-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.map-search-input {
+    flex: 1;
+    padding: 12px 15px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size: 0.95em;
+    transition: border-color 0.3s;
+}
+
+.map-search-input:focus {
+    outline: none;
+    border-color: #123524;
+    box-shadow: 0 0 0 3px rgba(18, 53, 36, 0.1);
+}
+
+.map-search-btn {
+    padding: 12px 24px;
+    background: #123524;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.map-search-btn:hover {
+    background: #3E7B27;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+/* Location Information Display */
+
+.location-info {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-left: 4px solid #123524;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.location-info-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.location-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 10px;
+    background: white;
+    border-radius: 6px;
+    transition: transform 0.2s;
+}
+
+.location-item:hover {
+    transform: translateX(5px);
+}
+
+.location-item i {
+    color: #123524;
+    font-size: 1.3em;
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+.location-item > div {
+    flex: 1;
+}
+
+.location-item strong {
+    display: block;
+    color: #555;
+    margin-bottom: 5px;
+    font-size: 0.85em;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.location-item span {
+    color: #333;
+    font-size: 1em;
+    font-weight: 500;
+}
+
+/* Confidence Badges */
+
+.confidence-badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 0.75em;
+    font-weight: 600;
+    margin-left: 8px;
+    animation: fadeIn 0.3s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.confidence-badge.high {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.confidence-badge.medium {
+    background: #fff3cd;
+    color: #856404;
+    border: 1px solid #ffeaa7;
+}
+
+.confidence-badge.low {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Cross-Barangay Warning */
+
+.cross-warning {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px;
+    background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+    border-radius: 8px;
+    border-left: 4px solid #ffc107;
+    margin-top: 10px;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.9; }
+}
+
+.cross-warning i {
+    color: #ff9800;
+    font-size: 1.5em;
+    animation: shake 0.5s;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+.cross-warning span {
+    color: #856404;
+    font-size: 0.95em;
+    line-height: 1.5;
+}
+
+/* Modal Footer Buttons */
+
+.map-modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    padding-top: 20px;
+    border-top: 2px solid #e0e0e0;
+    margin-top: 15px;
+}
+
+.cancel-btn, .confirm-btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.95em;
+}
+
+.cancel-btn {
+    background: #6c757d;
+    color: white;
+}
+
+.cancel-btn:hover {
+    background: #5a6268;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.confirm-btn {
+    background: #123524;
+    color: white;
+}
+
+.confirm-btn:hover:not(:disabled) {
+    background: #3E7B27;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(18, 53, 36, 0.3);
+}
+
+.confirm-btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+/* ====================================
+   CROSS-BARANGAY TOGGLE SYSTEM
+   ==================================== */
+
+#cross-barangay-toggle-container {
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.toggle-container {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 10px;
+    padding: 25px;
+    border-left: 5px solid #123524;
+    margin: 20px 1rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.07);
+}
+
+.toggle-label {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.toggle-label input[type="checkbox"] {
+    display: none;
+}
+
+.toggle-slider {
+    position: relative;
+    width: 60px;
+    height: 30px;
+    background: #ccc;
+    border-radius: 30px;
+    transition: background 0.3s;
+    flex-shrink: 0;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.toggle-slider::before {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background: white;
+    border-radius: 50%;
+    top: 3px;
+    left: 3px;
+    transition: transform 0.3s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.toggle-label input[type="checkbox"]:checked + .toggle-slider {
+    background: #123524;
+}
+
+.toggle-label input[type="checkbox"]:checked + .toggle-slider::before {
+    transform: translateX(30px);
+}
+
+.toggle-text {
+    font-weight: 600;
+    color: #333;
+    font-size: 1.1em;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.toggle-text i {
+    color: #ff9800;
+    font-size: 1.2em;
+}
+
+.toggle-description {
+    margin-top: 15px;
+    padding: 15px;
+    background: white;
+    border-radius: 8px;
+    color: #666;
+    font-size: 0.95em;
+    line-height: 1.7;
+    border: 1px solid #e0e0e0;
+}
+
+.toggle-description strong {
+    color: #333;
+}
+
+#detected-location, #user-location {
+    font-weight: 700;
+    color: #123524;
+    background: rgba(18, 53, 36, 0.1);
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+.highlight-toggle {
+    animation: highlightPulse 1.5s ease-in-out 3;
+    border-left-color: #ffc107 !important;
+}
+
+@keyframes highlightPulse {
+    0%, 100% {
+        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        transform: scale(1);
+    }
+    50% {
+        background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+        transform: scale(1.02);
+    }
+}
+
+/* ====================================
+   LOCKED INPUT FIELDS
+   ==================================== */
+
+input[readonly].locked-field {
+    background-color: #f0f0f0 !important;
+    cursor: not-allowed !important;
+    color: #666;
+    border: 1px solid #ddd;
+    position: relative;
+}
+
+input[readonly].locked-field:focus {
+    box-shadow: none !important;
+    border-color: #ddd !important;
+}
+
+/* Optional: Add lock icon via parent wrapper */
+.locked-field-wrapper {
+    position: relative;
+}
+
+.locked-field-wrapper::after {
+    content: '\f023'; /* Font Awesome lock icon */
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    pointer-events: none;
+}
+
+/* ====================================
+   LOADING & SUCCESS FEEDBACK
+   ==================================== */
+
+.loading-spinner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 30px;
+    color: #123524;
+    font-size: 1.1em;
+}
+
+.loading-spinner i {
+    font-size: 2em;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.success-toast {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+    color: #155724;
+    padding: 18px 28px;
+    border-radius: 10px;
+    border-left: 4px solid #28a745;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    z-index: 10000;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.success-toast.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.success-toast i {
+    font-size: 1.5em;
+}
+
+/* ====================================
+   RESPONSIVE DESIGN
+   ==================================== */
+
+@media (max-width: 800px) {
+    .map-modal-content {
+        width: 95%;
+        margin: 5% auto;
+        padding: 15px;
+        max-height: 90vh;
+        overflow-y: auto;
+    }
+    
+    #map {
+        height: 300px !important;
+    }
+    
+    .map-search-container {
+        flex-direction: column;
+    }
+    
+    .map-search-btn {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .map-modal-footer {
+        flex-direction: column;
+    }
+    
+    .cancel-btn, .confirm-btn {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .location-info-content {
+        font-size: 0.9em;
+    }
+    
+    .location-item {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .toggle-container {
+        padding: 15px;
+    }
+    
+    .toggle-text {
+        font-size: 1em;
+    }
+    
+    .confidence-badge {
+        display: block;
+        margin: 5px 0 0 0;
+        text-align: center;
+    }
+}

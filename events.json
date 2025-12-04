@@ -1,0 +1,373 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "event_id": "1",
+                "subject": "Commemoration of Mangrove Independence Day",
+                "venue": "Abucay Plaza",
+                "barangay": "Laon",
+                "city_municipality": "Abucay",
+                "area_no": "ABU-01",
+                "start_date": "2025-09-10 19:06:10",
+                "end_date": "2025-09-10 22:06:10",
+                "event_type": "Tree Planting",
+                "participants": "1",
+                "event_status": "Completed"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.53544,
+                    14.722236
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "event_id": "2",
+                "subject": "Bakawan Fest",
+                "venue": "Abucay Plaza",
+                "barangay": "Wawa",
+                "city_municipality": "Abucay",
+                "area_no": "ABU-01",
+                "start_date": "2025-06-27 08:00:00",
+                "end_date": "2025-07-04 05:00:00",
+                "event_type": "Tree Planting",
+                "participants": "1",
+                "event_status": "Completed"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.535628,
+                    14.72205
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "event_id": "4",
+                "subject": "Mangrove Event Tenejero",
+                "venue": "Tenejero Elementary School, Manahan Street, Tenejero, San Jose, Balanga, Bataan, Central Luzon, 2100, Philippines",
+                "barangay": "Tenejero",
+                "city_municipality": "Balanga",
+                "area_no": "",
+                "start_date": "2025-08-23 12:00:00",
+                "end_date": "2025-08-23 17:00:00",
+                "event_type": "Mangrove Restoration",
+                "participants": "0",
+                "event_status": "Completed"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.533366,
+                    14.67822
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "event_id": "5",
+                "subject": "Binakuna ONE",
+                "venue": "Old National Road, Ibayo, Poblacion, Gabon, Abucay, Bataan, Central Luzon, 2114, Philippines",
+                "barangay": "Wawa",
+                "city_municipality": "Abucay",
+                "area_no": "ABU_BAL-01",
+                "start_date": "2025-08-09 08:00:00",
+                "end_date": "2025-08-09 17:00:00",
+                "event_type": "Medical Mission",
+                "participants": "1",
+                "event_status": "Completed"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.53563,
+                    14.722063
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "event_id": "6",
+                "subject": "Cleaning Mangrove",
+                "venue": "Narra Street, Tenejero, San Jose, Balanga, Bataan, Central Luzon, 2100, Philippines",
+                "barangay": "Tenejero",
+                "city_municipality": "Balanga",
+                "area_no": "",
+                "start_date": "2025-08-11 08:00:00",
+                "end_date": "2025-08-15 11:00:00",
+                "event_type": "Clean Up Drive",
+                "participants": "1",
+                "event_status": "Completed"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.53386,
+                    14.678446
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "event_id": "8",
+                "subject": "Bayan ni Juan, may Bakawan",
+                "venue": "Wetland Park, Tortugas, Balanga, Bataan",
+                "barangay": "Tortugas",
+                "city_municipality": "Balanga",
+                "area_no": "ABU_BAL-01",
+                "start_date": "2025-08-09 09:00:00",
+                "end_date": "2025-08-09 16:00:00",
+                "event_type": "Live Tour Seminar",
+                "participants": "0",
+                "event_status": "Completed"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.565939,
+                    14.694557
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "event_id": "11",
+                "subject": "Klasik Kalikasan Seminar: Mangrove Conservation",
+                "venue": "BPSU Sari Gamit, Kinatawan Street, Tenejero, San Jose, Balanga, Bataan",
+                "barangay": "Tenejero",
+                "city_municipality": "Balanga",
+                "area_no": "",
+                "start_date": "2025-08-16 13:00:00",
+                "end_date": "2025-08-22 12:00:00",
+                "event_type": "Seminar",
+                "participants": "0",
+                "event_status": "Completed"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.530209,
+                    14.677067
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "event_id": "12",
+                "subject": "KabakaJUAN Project",
+                "venue": "Manahan Street, Tenejero, San Jose, Balanga, Bataan",
+                "barangay": "Tenejero",
+                "city_municipality": "Balanga",
+                "area_no": "",
+                "start_date": "2025-08-18 08:00:00",
+                "end_date": "2025-08-22 12:00:00",
+                "event_type": "Clean Up Drive",
+                "participants": "0",
+                "event_status": "Completed"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.534289,
+                    14.679899
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "event_id": "13",
+                "subject": "May Pera sa Isda Project",
+                "venue": "Tenejero, San Jose, Balanga, Bataan",
+                "barangay": "Tenejero",
+                "city_municipality": "Balanga",
+                "area_no": "",
+                "start_date": "2025-08-25 08:00:00",
+                "end_date": "2025-08-25 12:00:00",
+                "event_type": "Animal Awareness",
+                "participants": "0",
+                "event_status": "Completed"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.534643,
+                    14.679846
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "event_id": "14",
+                "subject": "Restoration of Mangroves in Wawa",
+                "venue": "Wawa, Abucay, Bataan",
+                "barangay": "Wawa",
+                "city_municipality": "Abucay",
+                "area_no": "ABU-06",
+                "start_date": "2025-09-11 01:00:00",
+                "end_date": "2025-09-11 03:00:00",
+                "event_type": "Mangrove Restoration",
+                "participants": "0",
+                "event_status": "Completed"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.547099,
+                    14.723408
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "event_id": "19",
+                "subject": "Event Test 01",
+                "venue": "M. Delos Reyes Street, Tortugas, Balanga, Bataan, Central Luzon, 2100, Philippines",
+                "barangay": "Tortugas",
+                "city_municipality": "Balanga",
+                "area_no": "",
+                "start_date": "2025-09-12 03:00:00",
+                "end_date": "2025-09-12 06:00:00",
+                "event_type": "Medical Mission",
+                "participants": "1",
+                "event_status": "Completed"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.563579,
+                    14.69441
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "event_id": "20",
+                "subject": "This event is testing",
+                "venue": "Anacleto del Rosario Street, Puerto Rivas Ibaba, Tortugas, Balanga, Bataan, Central Luzon, 2100, Philippines",
+                "barangay": "Tenejero",
+                "city_municipality": "Balanga",
+                "area_no": "ABU-01",
+                "start_date": "2025-09-11 23:37:00",
+                "end_date": "2025-09-11 23:59:00",
+                "event_type": "Tree Planting",
+                "participants": "1",
+                "event_status": "Completed"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.559351,
+                    14.701071
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "event_id": "23",
+                "subject": "Mangrove Taniman",
+                "venue": "Wetland Park, Tortugas, Balanga, Bataan",
+                "barangay": "Tortugas",
+                "city_municipality": "Balanga",
+                "area_no": "ABU_BAL-01",
+                "start_date": "2025-09-13 13:00:00",
+                "end_date": "2025-09-13 16:00:00",
+                "event_type": "Tree Planting",
+                "participants": "0",
+                "event_status": "Completed"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.564587,
+                    14.693972
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "event_id": "24",
+                "subject": "Event 02",
+                "venue": "wawa abucay bataan",
+                "barangay": "Wawa",
+                "city_municipality": "Abucay",
+                "area_no": "ABU-01",
+                "start_date": "2025-09-12 14:32:00",
+                "end_date": "2025-09-12 14:40:00",
+                "event_type": "Tree Planting",
+                "participants": "0",
+                "event_status": "Completed"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    0,
+                    0
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "event_id": "25",
+                "subject": "Isang Sulyap sa Kalikasan: Mangrove Edition",
+                "venue": "Tortugas, Balanga, Bataan",
+                "barangay": "Tortugas",
+                "city_municipality": "Balanga",
+                "area_no": "ABU_BAL-01",
+                "start_date": "2025-09-22 10:00:00",
+                "end_date": "2025-09-22 16:00:00",
+                "event_type": "Seminar",
+                "participants": "0",
+                "event_status": "Completed"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.559866,
+                    14.698509
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "event_id": "26",
+                "subject": "Forest Rangers Part I",
+                "venue": "M. Delos Reyes Street, Tortugas, Balanga",
+                "barangay": "Tortugas",
+                "city_municipality": "Balanga",
+                "area_no": "ABU_BAL-01",
+                "start_date": "2025-09-23 08:00:00",
+                "end_date": "2025-09-23 17:00:00",
+                "event_type": "Tree Planting",
+                "participants": "0",
+                "event_status": "Completed"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.562495,
+                    14.694195
+                ]
+            }
+        }
+    ]
+}

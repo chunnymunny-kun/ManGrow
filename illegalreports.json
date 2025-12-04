@@ -1,0 +1,1347 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "report_id": 1,
+                "reporter_id": null,
+                "report_type": "Illegal Activity Report",
+                "report_date": "2025-07-04T11:53",
+                "priority": "Normal",
+                "incident_type": "Illegal Cutting",
+                "area_no": "ABU-03",
+                "city_municipality": "Abucay",
+                "description": "3 people, two of them wearing masks, one disguised as police officer. All suspicious.",
+                "contact_no": "09887362717",
+                "created_at": "2025-07-04 11:54:56",
+                "media": [
+                    "uploads\/illegal_reports\/68675090cd208_8f03013aeb3f5c0d.jpg"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.541874,
+                    14.734503
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "report_id": 2,
+                "reporter_id": null,
+                "report_type": "Illegal Activity Report",
+                "report_date": "2025-07-04T11:54",
+                "priority": "Emergency",
+                "incident_type": "Fire",
+                "area_no": "ABU_BAL-01",
+                "city_municipality": "Abucay",
+                "description": "HUGE FIRE OCCURING NEED HELP!!!",
+                "contact_no": "09882635618",
+                "created_at": "2025-07-04 11:56:31",
+                "media": [
+                    "uploads\/illegal_reports\/686750ef64b0f_02d14ad3608f9755.jpg"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.55256,
+                    14.705614
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "report_id": 3,
+                "reporter_id": null,
+                "report_type": "Illegal Activity Report",
+                "report_date": "2025-07-04T13:58",
+                "priority": "Normal",
+                "incident_type": "Construction",
+                "area_no": "ABU-06",
+                "city_municipality": "Abucay",
+                "description": "There are construction practices around this area",
+                "contact_no": "09828372811",
+                "created_at": "2025-07-04 13:59:22",
+                "media": [
+                    "uploads\/illegal_reports\/68676dba7bff2_f056b73536b39577.jpg"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.547555,
+                    14.714621
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "report_id": 4,
+                "reporter_id": 19,
+                "report_type": "Illegal Activity Report",
+                "report_date": "2025-07-05T18:47",
+                "priority": "Normal",
+                "incident_type": "Water Pollution",
+                "area_no": "ABU_BAL-01",
+                "city_municipality": "Abucay",
+                "description": "The mangrove area around here has trash everywhere.",
+                "contact_no": "09882635618",
+                "created_at": "2025-07-05 18:51:17",
+                "media": [
+                    "uploads\/illegal_reports\/686903a53cf27_f56d399504b319b2.jpg"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.550703,
+                    14.709184
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "report_id": 21,
+                "reporter_id": null,
+                "report_type": "Illegal Activity Report",
+                "report_date": "2025-07-07T17:48",
+                "priority": "Normal",
+                "incident_type": "Harmful Fishing",
+                "area_no": "ABU-03",
+                "city_municipality": "Abucay",
+                "description": "3 Fishermen using grenade on catching fish. They are all masked.",
+                "contact_no": "09882635618",
+                "created_at": "2025-07-07 17:49:18",
+                "media": [
+                    "uploads\/illegal_reports\/686b981ebfa59_fd765d4177cab943.jpg"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.541273,
+                    14.736578
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "report_id": 22,
+                "reporter_id": null,
+                "report_type": "Illegal Activity Report",
+                "report_date": "2025-07-07T17:51",
+                "priority": "Normal",
+                "incident_type": "Harmful Fishing",
+                "area_no": "ABU-03",
+                "city_municipality": "Abucay",
+                "description": "There are 3 fishermen using dynamite to catch fish. They are all masked.",
+                "contact_no": "09882635618",
+                "created_at": "2025-07-07 17:52:15",
+                "media": [
+                    "uploads\/illegal_reports\/686b98cf1971b_a2059f4303ce4684.jpg"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.54123,
+                    14.736703
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "report_id": 23,
+                "reporter_id": null,
+                "report_type": "Illegal Activity Report",
+                "report_date": "2025-07-07T18:04",
+                "priority": "Normal",
+                "incident_type": "Illegal Cutting",
+                "area_no": "ABU-01",
+                "city_municipality": "Abucay",
+                "description": "A group of men trying to cut down trees.",
+                "contact_no": "09882635618",
+                "created_at": "2025-07-07 18:05:04",
+                "media": [
+                    "uploads\/illegal_reports\/686b9bd06c283_9b5dfd04b7a544f8.jpg"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.548656,
+                    14.739981
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "report_id": 24,
+                "reporter_id": 12,
+                "report_type": "Illegal Activity Report",
+                "report_date": "2025-07-07T18:07",
+                "priority": "Normal",
+                "incident_type": "Water Pollution",
+                "area_no": "ABU-02",
+                "city_municipality": "Abucay",
+                "description": "basta nagreport ako yun na yon",
+                "contact_no": "09887362717",
+                "created_at": "2025-07-07 18:09:11",
+                "media": [
+                    "uploads\/illegal_reports\/686b9cc75786e_333c2916778cd4b5.jpg"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    121.061376,
+                    14.532608
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "report_id": 25,
+                "reporter_id": null,
+                "report_type": "Illegal Activity Report",
+                "report_date": "2025-07-08T11:30",
+                "priority": "Normal",
+                "incident_type": "Construction",
+                "area_no": "ABU-03",
+                "city_municipality": "Abucay",
+                "description": "A group of men working around the area without permission from the authorities. One of them told us to get off when we are collecting data samples from the site.",
+                "contact_no": "09887362717",
+                "created_at": "2025-07-08 11:32:32",
+                "media": [
+                    "uploads\/illegal_reports\/686c9150f0e53_c616683363ceeca0.jpg"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.541917,
+                    14.73471
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "report_id": 26,
+                "reporter_id": 25,
+                "report_type": "Illegal Activity Report",
+                "report_date": "2025-07-08T13:46",
+                "priority": "Emergency",
+                "incident_type": "Fire",
+                "area_no": "ABU-05",
+                "city_municipality": "Abucay",
+                "description": "Huge fire by the time of this recording.",
+                "contact_no": "09887362717",
+                "created_at": "2025-07-08 13:47:01",
+                "media": [
+                    "uploads\/illegal_reports\/686cb0d512768_065931b1e0ce0bea.jpg"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.547512,
+                    14.723587
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "report_id": 27,
+                "reporter_id": null,
+                "report_type": "Illegal Activity Report",
+                "report_date": "2025-07-08T13:47",
+                "priority": "Normal",
+                "incident_type": "Waste Dumping",
+                "area_no": "ABU-02",
+                "city_municipality": "Abucay",
+                "description": "Lots of waste dumped by 4 men at this area.",
+                "contact_no": "09887362717",
+                "created_at": "2025-07-08 13:47:45",
+                "media": [
+                    "uploads\/illegal_reports\/686cb1014f51e_b9df89c8507ff8cd.jpg"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.546136,
+                    14.738386
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "report_id": 28,
+                "reporter_id": null,
+                "report_type": "Illegal Activity Report",
+                "report_date": "2025-07-09T02:23",
+                "priority": "Normal",
+                "incident_type": "Illegal Cutting",
+                "area_no": "ABU-03",
+                "city_municipality": "Abucay",
+                "description": "Two men were caught in the act cutting down mangrove trees.",
+                "contact_no": "09887362717",
+                "created_at": "2025-07-09 02:24:40",
+                "media": [
+                    "uploads\/illegal_reports\/686d62684bcb1_cf4e26b95ebb8384.jpg"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.540607,
+                    14.736895
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "report_id": 29,
+                "reporter_id": 25,
+                "report_type": "Illegal Activity Report",
+                "report_date": "2025-07-11T14:44",
+                "priority": "Normal",
+                "incident_type": "Harmful Fishing",
+                "area_no": "ABU-02",
+                "city_municipality": "Abucay",
+                "description": "There are 2 men doing fishing with guns",
+                "contact_no": "09882635618",
+                "created_at": "2025-07-11 14:45:30",
+                "media": [
+                    "uploads\/illegal_reports\/6870b30a7e5d5_1389cae755b3bfee.jpg"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.551169,
+                    14.677024
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "report_id": 30,
+                "reporter_id": 12,
+                "report_type": "Illegal Activity Report",
+                "report_date": "2025-07-11T16:28",
+                "priority": "Normal",
+                "incident_type": "Illegal Cutting",
+                "area_no": "ABU-03",
+                "city_municipality": "Abucay",
+                "description": "There are people who cut trees within this area",
+                "contact_no": "09887362717",
+                "created_at": "2025-07-11 16:29:28",
+                "media": [
+                    "uploads\/illegal_reports\/6870cb68ede27_6ca5c28c0caccfef.jpg"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.563302,
+                    14.680064
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "report_id": 31,
+                "reporter_id": null,
+                "report_type": "Illegal Activity Report",
+                "report_date": "2025-07-15T13:50",
+                "priority": "Emergency",
+                "incident_type": "Illegal Cutting",
+                "area_no": "ABU-03",
+                "city_municipality": "Abucay",
+                "description": "There were 3 men cutting mangroves around the area",
+                "contact_no": "09887362717",
+                "created_at": "2025-07-15 13:52:42",
+                "media": [
+                    "uploads\/illegal_reports\/6875ecaa32e3d_11016b1f7a7bf91b.jpg"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.540607,
+                    14.736895
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "report_id": 32,
+                "reporter_id": 12,
+                "report_type": "Illegal Activity Report",
+                "report_date": "2025-07-31T12:59",
+                "priority": "Normal",
+                "incident_type": "Construction",
+                "area_no": "ABU-01",
+                "city_municipality": "Abucay",
+                "description": "There is a construction ongoing within this area that are not monitored by local authorities.",
+                "contact_no": "09887362717",
+                "created_at": "2025-07-31 13:03:22",
+                "media": [
+                    "uploads\/illegal_reports\/688af91a86814_de8ab8c83477ff1d.jpg"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.549042,
+                    14.738487
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "report_id": 33,
+                "reporter_id": 12,
+                "report_type": "Illegal Activity Report",
+                "report_date": "2025-08-01T17:22",
+                "priority": "Normal",
+                "incident_type": "Water Pollution",
+                "area_no": "ABU-01",
+                "city_municipality": "Abucay",
+                "description": "Water is polluted around this area",
+                "contact_no": "09882635618",
+                "created_at": "2025-08-01 17:23:21",
+                "media": [
+                    "uploads\/illegal_reports\/688c878954a17_469402b1295cc929.jpg"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.540132,
+                    14.68536
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "report_id": 34,
+                "reporter_id": 29,
+                "report_type": "Illegal Activity Report",
+                "report_date": "2025-08-07T17:54",
+                "priority": "Normal",
+                "incident_type": "Harmful Fishing",
+                "area_no": "ABU-03",
+                "city_municipality": "Abucay",
+                "description": "The fish here are floating, dead. Maybe its because someone used chemicals to contaminate the area.",
+                "contact_no": "09887362717",
+                "created_at": "2025-08-07 17:55:53",
+                "media": [
+                    "uploads\/illegal_reports\/6894782944348_bd4fdfd10102626f.jpg"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.540607,
+                    14.736895
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "report_id": 35,
+                "reporter_id": null,
+                "report_type": "Illegal Activity Report",
+                "report_date": "2025-08-08T01:12",
+                "priority": "Emergency",
+                "incident_type": "Fire",
+                "area_no": "ABU-03",
+                "city_municipality": "Abucay",
+                "description": "May sunog nga dito",
+                "contact_no": "09882635618",
+                "created_at": "2025-08-08 01:13:28",
+                "media": [
+                    "uploads\/illegal_reports\/6894deb8f217f_ac55fbe4f7eb5128.jpg"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.540365,
+                    14.686618
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "report_id": 36,
+                "reporter_id": null,
+                "report_type": "Illegal Activity Report",
+                "report_date": "2025-08-08T02:49",
+                "priority": "Normal",
+                "incident_type": "Waste Dumping",
+                "area_no": "ABU-04",
+                "city_municipality": "Abucay",
+                "description": "May nagkakalat dito pakibawalan niyo",
+                "contact_no": "09882635618",
+                "created_at": "2025-08-08 02:49:52",
+                "media": [
+                    "uploads\/illegal_reports\/6894f550e7abb_a1698994fa9620db.jpg"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.538872,
+                    14.728755
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "report_id": 37,
+                "reporter_id": null,
+                "report_type": "Illegal Activity Report",
+                "report_date": "2025-08-08T18:54",
+                "priority": "Normal",
+                "incident_type": "Illegal Cutting",
+                "area_no": "ABU-01",
+                "city_municipality": "Abucay",
+                "description": "4 people cutting trees",
+                "contact_no": "09887362717",
+                "created_at": "2025-08-08 18:55:42",
+                "media": [
+                    "uploads\/illegal_reports\/6895d7aeb4660_5ca4f3d0d508322c.jpg"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.548827,
+                    14.740023
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "report_id": 38,
+                "reporter_id": 12,
+                "report_type": "Illegal Activity Report",
+                "report_date": "2025-08-17T21:01",
+                "priority": "Normal",
+                "incident_type": "Illegal Cutting",
+                "area_no": "ABU-01",
+                "city_municipality": "Abucay",
+                "description": "Try lang",
+                "contact_no": "09887362717",
+                "created_at": "2025-08-17 21:23:14",
+                "media": [
+                    "uploads\/illegal_reports\/68a1d7c2405a4_8b38a7d4060ece3f.jpg"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.551237,
+                    14.676996
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "report_id": 39,
+                "reporter_id": 12,
+                "report_type": "Illegal Activity Report",
+                "report_date": "2025-08-17T22:49",
+                "priority": "Emergency",
+                "incident_type": "Illegal Cutting",
+                "area_no": "ABU-03",
+                "city_municipality": "Abucay",
+                "address": "Old National Road, Poblacion, Abucay, Bataan 2114, Philippines",
+                "description": "Two people cutting mangrove trees",
+                "contact_no": "09882635618",
+                "created_at": "2025-08-17 22:57:36",
+                "media": [
+                    "uploads\/illegal_reports\/68a1ede038440_b28957775e7326be.jpg"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.542249,
+                    14.735696
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "report_id": 40,
+                "reporter_id": 12,
+                "report_type": "Illegal Activity Report",
+                "report_date": "2025-08-18T17:53",
+                "priority": "Normal",
+                "incident_type": "Fire",
+                "area_no": "ABU-05",
+                "city_municipality": "Abucay",
+                "barangays": "Wawa",
+                "address": "Lati, Poblacion, Abucay, Bataan 2114, Philippines",
+                "description": "A fire suddenly appeared near the neighborhood at this area",
+                "contact_no": "09887362717",
+                "created_at": "2025-08-18 17:54:50",
+                "media": [
+                    "uploads\/illegal_reports\/68a2f86a2904b_553cb323d60c995c.jpg"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.547512,
+                    14.723379
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "report_id": 41,
+                "reporter_id": null,
+                "report_type": "Illegal Activity Report",
+                "report_date": "2025-08-18T22:16",
+                "priority": "Normal",
+                "incident_type": "Waste Dumping",
+                "area_no": "ABU-04",
+                "city_municipality": "Abucay",
+                "barangays": "Laon, Mabatang, Wawa",
+                "address": "Old National Road, Poblacion, Abucay, Bataan 2114, Philippines",
+                "description": "3 people dumping waste on the river",
+                "contact_no": "09882635618",
+                "created_at": "2025-08-18 22:27:01",
+                "media": [
+                    "uploads\/illegal_reports\/68a33835b7be9_ca94d88ea0df9fdb.jpg",
+                    "uploads\/illegal_reports\/68a33835b8b0b_f8f7dd1c36743b35.jpg",
+                    "uploads\/illegal_reports\/68a33835b914c_43346f79ada0e135.jpg"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.540541,
+                    14.727177
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "report_id": 42,
+                "reporter_id": null,
+                "report_type": "Illegal Activity Report",
+                "report_date": "2025-08-20T10:11",
+                "priority": "Normal",
+                "incident_type": "Water Pollution",
+                "area_no": "ABU-05",
+                "city_municipality": "Abucay",
+                "barangays": "Wawa",
+                "address": "Lati, Poblacion, Abucay, Bataan 2114, Philippines",
+                "description": "The water is polluted around this area",
+                "contact_no": "09882635618",
+                "created_at": "2025-08-20 10:13:47",
+                "media": [
+                    "uploads\/illegal_reports\/68a52f5bce427_e0f8b5dfbd4278dd.jpg"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.547559,
+                    14.723442
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "report_id": 43,
+                "reporter_id": 19,
+                "report_type": "Illegal Activity Report",
+                "report_date": "2025-08-20T08:16",
+                "priority": "Normal",
+                "incident_type": "Harmful Fishing",
+                "area_no": "ABU-04",
+                "city_municipality": "Abucay",
+                "barangays": "Mabatang",
+                "address": "Old National Road, Poblacion, Abucay, Bataan 2114, Philippines",
+                "description": "The fish are dying around this mangrove area, its highly likely that there were activities of fishing with harmful methods here",
+                "contact_no": "09882635618",
+                "created_at": "2025-08-20 10:18:10",
+                "media": [
+                    "uploads\/illegal_reports\/68a53062b9442_3aedef63a5678e68.avif"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.538051,
+                    14.7289
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "report_id": 44,
+                "reporter_id": 16,
+                "report_type": "Illegal Activity Report",
+                "report_date": "2025-08-20T10:18",
+                "priority": "Normal",
+                "incident_type": "Waste Dumping",
+                "area_no": "ABU-06",
+                "city_municipality": "Abucay",
+                "barangays": "Capitangan, Omboy",
+                "address": "Lati, Poblacion, Abucay, Bataan 2114, Philippines",
+                "description": "Lots of waste around the area need action",
+                "contact_no": "",
+                "created_at": "2025-08-20 10:20:53",
+                "media": [
+                    "uploads\/illegal_reports\/68a5310526fd2_bd198fc9507584d7.jpeg",
+                    "uploads\/illegal_reports\/68a53105275bd_59b55cf57e99c9a5.jpg"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.548342,
+                    14.714351
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "report_id": 45,
+                "reporter_id": 12,
+                "report_type": "Illegal Activity Report",
+                "report_date": "2025-08-20T11:06",
+                "priority": "Emergency",
+                "incident_type": "Fire",
+                "area_no": "ABU-05",
+                "city_municipality": "Abucay",
+                "barangays": "Wawa",
+                "address": "Lati, Poblacion, Abucay, Bataan 2114, Philippines",
+                "description": "A fire suddenly appeared near the neighborhood at this area, trees are burned, the fire is powerful and is close to spreading to the neighborhood",
+                "contact_no": "09882635618",
+                "created_at": "2025-08-20 11:07:33",
+                "media": [
+                    "uploads\/illegal_reports\/68a53bf5426d9_94880f284ac3b35c.jpg"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.547512,
+                    14.722923
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "report_id": 46,
+                "reporter_id": null,
+                "report_type": "Illegal Activity Report",
+                "report_date": "2025-08-20T11:09",
+                "priority": "Normal",
+                "incident_type": "Construction",
+                "area_no": "ABU-04",
+                "city_municipality": "Abucay",
+                "barangays": "Wawa",
+                "address": "Lati, Poblacion, Abucay, Bataan 2114, Philippines",
+                "description": "5 men working on a house near the mangrove area",
+                "contact_no": "09882635618",
+                "created_at": "2025-08-20 11:11:00",
+                "media": [
+                    "uploads\/illegal_reports\/68a53cc4d73e8_83ace469cd563732.jpg"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.543455,
+                    14.726736
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "report_id": 47,
+                "reporter_id": 12,
+                "report_type": "Illegal Activity Report",
+                "report_date": "2025-08-20T11:35",
+                "priority": "Normal",
+                "incident_type": "Construction",
+                "area_no": "ABU-04",
+                "city_municipality": "Abucay",
+                "barangays": "Mabatang, Wawa",
+                "address": "Lati, Poblacion, Abucay, Bataan 2114, Philippines",
+                "description": "5 men working on a house near the mangrove area",
+                "contact_no": "09828372811",
+                "created_at": "2025-08-20 11:35:25",
+                "media": [
+                    "uploads\/illegal_reports\/68a5427d7ece9_286eaa45ff499b4e.jpg",
+                    "uploads\/illegal_reports\/68a5427d7f59a_23d79144ba3a9602.jpg",
+                    "uploads\/illegal_reports\/68a5427d8593f_43de1c8f11c3af70.jpg"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.543455,
+                    14.726736
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "report_id": 48,
+                "reporter_id": null,
+                "report_type": "Illegal Activity Report",
+                "report_date": "2025-08-28T15:01",
+                "priority": "Normal",
+                "incident_type": "Construction",
+                "area_no": "ABU-03",
+                "city_municipality": "Abucay",
+                "barangays": "Wawa",
+                "address": "Old National Road, Poblacion, Abucay, Bataan 2114, Philippines",
+                "description": "4 people working at an unauthorized area near mangroves, causing cutting of trees",
+                "contact_no": "09882635618",
+                "created_at": "2025-08-28 15:07:42",
+                "media": [
+                    "uploads\/illegal_reports\/68b0003eb8c01_14ea395e893e3c21.png",
+                    "uploads\/illegal_reports\/68b0003eb94ac_95160cdb58cc02e2.jfif",
+                    "uploads\/illegal_reports\/68b0003eb9924_8a4bf90d950d6987.jpg"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.541659,
+                    14.735831
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "report_id": 49,
+                "reporter_id": 35,
+                "report_type": "Illegal Activity Report",
+                "report_date": "2025-09-10T01:06",
+                "priority": "Normal",
+                "incident_type": "Illegal Cutting",
+                "area_no": "ABU-06",
+                "city_municipality": "Abucay",
+                "barangays": "Capitangan, Wawa",
+                "address": "Santana Land, Poblacion, Abucay, Bataan 2114, Philippines",
+                "description": "Three men caught red handed cutting mangrove trees without permission and attempts to sell it for profit",
+                "contact_no": "09882635618",
+                "created_at": "2025-09-10 01:09:17",
+                "media": [
+                    "uploads\/illegal_reports\/68c05f3dacc0a_af352cf869a9987d.png"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.546032,
+                    14.713521
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "report_id": 50,
+                "reporter_id": 35,
+                "report_type": "Illegal Activity Report",
+                "report_date": "2025-09-10T01:33",
+                "priority": "Normal",
+                "incident_type": "Waste Dumping",
+                "area_no": "ABU-06",
+                "city_municipality": "Abucay",
+                "barangays": "Wawa",
+                "address": "Lati, Poblacion, Abucay, Bataan 2114, Philippines",
+                "description": "Too many wastes dumped into the river",
+                "contact_no": "",
+                "created_at": "2025-09-10 01:36:11",
+                "media": [
+                    "uploads\/illegal_reports\/68c0658b35980_f9c773728cb21281.jpg",
+                    "uploads\/illegal_reports\/68c0658b368f6_35f32f2a594e3fa0.jpg"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.548757,
+                    14.71624
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "report_id": 51,
+                "reporter_id": 35,
+                "report_type": "Illegal Activity Report",
+                "report_date": "2025-09-10T01:39",
+                "priority": "Normal",
+                "incident_type": "Waste Dumping",
+                "area_no": "ABU-06",
+                "city_municipality": "Abucay",
+                "barangays": "Wawa",
+                "address": "Santana Land, Poblacion, Abucay, Bataan 2114, Philippines",
+                "description": "Trees are clogged because of waste",
+                "contact_no": "09828372811",
+                "created_at": "2025-09-10 01:40:15",
+                "media": [
+                    "uploads\/illegal_reports\/68c0667f76db9_eade63254eae4c09.jpg"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.547877,
+                    14.713314
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "report_id": 52,
+                "reporter_id": 29,
+                "report_type": "Illegal Activity Report",
+                "report_date": "2025-09-11T23:38",
+                "priority": "Normal",
+                "incident_type": "Water Pollution",
+                "area_no": "ABU-06",
+                "city_municipality": "Abucay",
+                "barangays": "Wawa",
+                "address": "Lati, Poblacion, Abucay, Bataan 2114, Philippines",
+                "description": "The water is dirty around the outer coast near the mangrove areas",
+                "contact_no": "09376246182",
+                "created_at": "2025-09-11 23:40:02",
+                "media": [
+                    "uploads\/illegal_reports\/68c2ed529fec2_50ccc48dc6139279.jpg",
+                    "uploads\/illegal_reports\/68c2ed52a0223_32c45e732b1e87f1.jpg"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.548306,
+                    14.717382
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "report_id": 53,
+                "reporter_id": 39,
+                "report_type": "Illegal Activity Report",
+                "report_date": "2025-09-12T13:55",
+                "priority": "Normal",
+                "incident_type": "Illegal Cutting",
+                "area_no": "ABU-06",
+                "city_municipality": "Abucay",
+                "barangays": "Wawa",
+                "address": "Lati, Poblacion, Abucay, Bataan 2114, Philippines",
+                "description": "Cutting of trees in the mangrove area",
+                "contact_no": "09887362717",
+                "created_at": "2025-09-12 13:56:24",
+                "media": [
+                    "uploads\/illegal_reports\/68c3b60863a2d_381ffba9e105712f.png"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.547965,
+                    14.713786
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "report_id": 54,
+                "reporter_id": 39,
+                "report_type": "Illegal Activity Report",
+                "report_date": "2025-09-12T14:25",
+                "priority": "Emergency",
+                "incident_type": "Harmful Fishing",
+                "area_no": "ABU-06",
+                "city_municipality": "Abucay",
+                "barangays": "Laon, Wawa",
+                "address": "Lati, Poblacion, Abucay, Bataan 2114, Philippines",
+                "description": "Fishing with Harmful Methods",
+                "contact_no": "09887362717",
+                "created_at": "2025-09-12 14:26:05",
+                "media": [
+                    "uploads\/illegal_reports\/68c3bcfd29b70_fa9f8432cbd77a99.png",
+                    "uploads\/illegal_reports\/68c3bcfd3bd72_6440262be7147650.webp"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.547402,
+                    14.714137
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "report_id": 55,
+                "reporter_id": 40,
+                "report_type": "Illegal Activity Report",
+                "report_date": "2025-09-22T19:00",
+                "priority": "Normal",
+                "incident_type": "Illegal Cutting",
+                "area_no": "ABU_BAL-01",
+                "city_municipality": "Abucay",
+                "barangays": "Wawa",
+                "address": "Lati, Poblacion, Abucay, Bataan 2114, Philippines",
+                "description": "cut tree",
+                "contact_no": "09347298347",
+                "created_at": "2025-09-22 19:00:52",
+                "media": [
+                    "uploads\/illegal_reports\/68d12c645da5e_52f01f11db9e9e85.jpg"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.551755,
+                    14.707954
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "report_id": 56,
+                "reporter_id": null,
+                "report_type": "Illegal Activity Report",
+                "report_date": "2025-09-25T02:54",
+                "priority": "Emergency",
+                "incident_type": "Construction",
+                "area_no": "ABU-04",
+                "city_municipality": "Abucay",
+                "barangays": "Mabatang, Wawa",
+                "address": "Old National Road, Poblacion, Abucay, Bataan 2114, Philippines",
+                "description": "Unauthorized construction done by 4 men",
+                "contact_no": "09887362717",
+                "created_at": "2025-09-25 02:55:47",
+                "media": [
+                    "uploads\/illegal_reports\/68d43eb3da9cb_1e1fa127470f3cd6.jpg"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.541668,
+                    14.727411
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "report_id": 57,
+                "reporter_id": 12,
+                "report_type": "Illegal Activity Report",
+                "report_date": "2025-10-02T01:33",
+                "priority": "Emergency",
+                "incident_type": "Harmful Fishing",
+                "area_no": "ABU-04",
+                "city_municipality": "Abucay",
+                "barangays": "Wawa",
+                "address": "Lati, Poblacion, Abucay, Bataan 2114, Philippines",
+                "description": "Chemicals are used while fishing",
+                "contact_no": "09347298347",
+                "created_at": "2025-10-02 01:34:07",
+                "media": [
+                    "uploads\/illegal_reports\/68dd661000ace_42aa19bb6a2546dd.jpg"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.545829,
+                    14.726492
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "report_id": 58,
+                "reporter_id": 12,
+                "report_type": "Illegal Activity Report",
+                "report_date": "2025-10-02T01:39",
+                "priority": "Normal",
+                "incident_type": "Fire",
+                "area_no": "ABU_BAL-01",
+                "city_municipality": "Balanga",
+                "barangays": "Tortugas, Tuyo",
+                "address": "Puerto Rivas Itaas, Puerto Rivas Itaas, Balanga, Bataan 2100, Philippines",
+                "description": "A fire happened on this area, causing the mangroves to die",
+                "contact_no": "09278376552",
+                "created_at": "2025-10-02 01:40:30",
+                "media": [
+                    "uploads\/illegal_reports\/68dd678eb5757_4818463c6712a48d.jfif",
+                    "uploads\/illegal_reports\/68dd678eb5aa4_667dd4d7960e7d10.jpg"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.55513,
+                    14.702771
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "report_id": 59,
+                "reporter_id": 35,
+                "report_type": "Illegal Activity Report",
+                "report_date": "2025-10-05T01:51",
+                "priority": "Emergency",
+                "incident_type": "Waste Dumping",
+                "area_no": "ABU-06",
+                "city_municipality": "Abucay",
+                "barangays": "Wawa",
+                "address": "Santana Land, Poblacion, Abucay, Bataan 2114, Philippines",
+                "description": "Waste are dumped into the area",
+                "contact_no": "09278376552",
+                "created_at": "2025-10-05 01:53:16",
+                "media": [
+                    "uploads\/illegal_reports\/68e15f0c4398d_1f696cc0ac632036.jpg"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.546723,
+                    14.713791
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "report_id": 60,
+                "reporter_id": 35,
+                "report_type": "Illegal Activity Report",
+                "report_date": "2025-10-05T02:34",
+                "priority": "Normal",
+                "incident_type": "Fire",
+                "area_no": "ABU-04",
+                "city_municipality": "Abucay",
+                "barangays": "Mabatang",
+                "address": "Old National Road, Poblacion, Abucay, Bataan 2114, Philippines",
+                "description": "fire near the river make mangroves die",
+                "contact_no": "09278376552",
+                "created_at": "2025-10-05 02:34:49",
+                "media": [
+                    "uploads\/illegal_reports\/68e168c972032_d95b7d484d988d9c.jfif",
+                    "uploads\/illegal_reports\/68e168c972a0f_f94038371945772e.jpg"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.541523,
+                    14.72753
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "report_id": 61,
+                "reporter_id": null,
+                "report_type": "Illegal Activity Report",
+                "report_date": "2025-10-05T03:11",
+                "priority": "Normal",
+                "incident_type": "Construction",
+                "area_no": "ABU-06",
+                "city_municipality": "Abucay",
+                "barangays": "Wawa",
+                "address": "Lati, Poblacion, Abucay, Bataan 2114, Philippines",
+                "description": "4 men doing unauthorized construction",
+                "contact_no": "09278376552",
+                "created_at": "2025-10-05 03:12:00",
+                "media": [
+                    "uploads\/illegal_reports\/68e17180b342b_4eef63edb7bbea58.jpg"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.548456,
+                    14.716386
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "report_id": 62,
+                "reporter_id": 29,
+                "report_type": "Illegal Activity Report",
+                "report_date": "2025-10-05T18:02",
+                "priority": "Normal",
+                "incident_type": "Water Pollution",
+                "area_no": "ABU-04",
+                "city_municipality": "Abucay",
+                "barangays": "Calaylayan",
+                "address": "Old National Road, Poblacion, Abucay, Bataan 2114, Philippines",
+                "description": "A man applies chemicals to mangroves",
+                "contact_no": "09347298347",
+                "created_at": "2025-10-05 18:03:42",
+                "media": [
+                    "uploads\/illegal_reports\/68e2427edd3b6_96b7ab3355c96df6.png"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.541152,
+                    14.727836
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "report_id": 63,
+                "reporter_id": 29,
+                "report_type": "Illegal Activity Report",
+                "report_date": "2025-10-05T18:04",
+                "priority": "Normal",
+                "incident_type": "Illegal Cutting",
+                "area_no": "ABU_BAL-01",
+                "city_municipality": "Balanga",
+                "barangays": "Tortugas, Tuyo",
+                "address": "Puerto Rivas Itaas, Puerto Rivas Itaas, Balanga, Bataan 2100, Philippines",
+                "description": "4 men cutting palapat trees",
+                "contact_no": "09278376552",
+                "created_at": "2025-10-05 18:05:31",
+                "media": [
+                    "uploads\/illegal_reports\/68e242eb9cae1_e58281a4cae9d295.jpg",
+                    "uploads\/illegal_reports\/68e242eb9cf85_2f3cad9c56d5e0a3.jpg",
+                    "uploads\/illegal_reports\/68e242eb9d644_1a91b7bbd429fc8f.jfif"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.553901,
+                    14.703416
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "report_id": 64,
+                "reporter_id": 12,
+                "report_type": "Illegal Activity Report",
+                "report_date": "2025-10-06T01:13",
+                "priority": "Emergency",
+                "incident_type": "Fire",
+                "area_no": "",
+                "city_municipality": "Pilar",
+                "barangays": "Santa Rosa",
+                "address": "CW E. Santos Street, Santa Rosa Village, Pilar, Bataan 2101, Philippines",
+                "description": "Fire ongoing at my place.",
+                "contact_no": "09278376552",
+                "created_at": "2025-10-06 01:14:10",
+                "media": [
+                    "uploads\/illegal_reports\/68e2a76254207_dafb7c7d696802ed.jpg",
+                    "uploads\/illegal_reports\/68e2a762558a7_5eb8e1f8a4c8d1e7.jpg"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.551033,
+                    14.676825
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "report_id": 65,
+                "reporter_id": 35,
+                "report_type": "Illegal Activity Report",
+                "report_date": "2025-10-13T00:50",
+                "priority": "Normal",
+                "incident_type": "Waste Dumping",
+                "area_no": "ABU-04",
+                "city_municipality": "Abucay",
+                "barangays": "Wawa",
+                "address": "Lati, Poblacion, Abucay, Bataan 2114, Philippines",
+                "description": "Two men working on waste dumping into mangrove areas",
+                "contact_no": "09278376552",
+                "created_at": "2025-10-13 00:51:18",
+                "media": [
+                    "uploads\/illegal_reports\/68ebdc866a9ff_d52935b9fac9fad1.jpg"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.543455,
+                    14.726736
+                ]
+            }
+        }
+    ]
+}

@@ -1,0 +1,736 @@
+/* General Profile Container */
+.profile-container {
+    width: 85%;
+    margin: 2rem auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+}
+
+header{
+    top:0;
+    height:62px;
+    position:sticky;
+    grid-area: header;
+    background-color: var(--base-clr);
+    color:azure;
+    padding: 1em 2em 1em 6.5em;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    z-index: 999;
+}
+
+/* Profile Header */
+.profile-header {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #2c5e3f 0%, #3d7352 100%);
+    color: white;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    margin-bottom: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.profile-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="10" cy="10" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="90" cy="20" r="0.5" fill="rgba(255,255,255,0.08)"/><circle cx="30" cy="80" r="0.8" fill="rgba(255,255,255,0.06)"/><circle cx="70" cy="90" r="1.2" fill="rgba(255,255,255,0.05)"/></svg>') repeat;
+    pointer-events: none;
+}
+
+.profile-picture {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 6px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.profile-picture:hover {
+    transform: scale(1.05);
+}
+
+.default-profile-picture {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 6px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+    position: relative;
+    z-index: 1;
+}
+
+.default-profile-picture i {
+    font-size: 4rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.profile-info {
+    display:flex;
+    flex-direction: column;
+    gap:5px;
+    margin-left: 2.5rem;
+    flex-grow: 1;
+    position: relative;
+    z-index: 1;
+}
+
+.profile-info h1 {
+    margin: 0;
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.profile-info p {
+    margin: 0;
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.9);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.profile-info p i {
+    width: 20px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Profile Stats */
+.profile-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+.stat {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    color: white;
+    padding: 1.5rem 2rem;
+    border-radius: 12px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    min-width: 180px;
+}
+
+.stat:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+.stat.current-points {
+    background: linear-gradient(135deg, #ff6b6b, #ee5a52);
+}
+
+.stat.total-points {
+    background: linear-gradient(135deg, #4ecdc4, #44a08d);
+}
+
+.stat.weekly-points {
+    background: linear-gradient(135deg, #f39c12, #e67e22);
+}
+
+.stat.rank {
+    background: linear-gradient(135deg, #9b59b6, #8e44ad);
+}
+
+.stat h2 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 800;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.stat p {
+    margin: 0.5rem 0 0 0;
+    font-size: 1rem;
+    font-weight: 600;
+    opacity: 0.9;
+}
+
+/* Profile Content Sections */
+.profile-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.profile-section {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.profile-section:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    transform: translateY(-2px);
+}
+
+.profile-section h2 {
+    margin-top: 0;
+    color: var(--base-clr);
+    border-bottom: 3px solid #e0e0e0;
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.profile-section h2 i {
+    color: #059669;
+}
+
+/* Badges */
+.badges-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: flex-start;
+    align-items: stretch;
+    text-align: center;
+}
+
+.badge-item,
+.badge {
+    flex: 0 0 calc(20% - 1.2rem); /* 5 badges per row on desktop */
+    min-width: 140px;
+    max-width: 180px;
+}
+
+.badge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem 1rem;
+    background: linear-gradient(135deg, #3d7352 0%, #a2836e 100%);
+    border-radius: 12px;
+    color: azure;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.badge::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+        transparent, 
+        rgba(255, 255, 255, 0.4), 
+        transparent
+    );
+    transition: left 0.6s ease;
+    pointer-events: none;
+}
+
+.badge:hover::before {
+    left: 100%;
+}
+
+.badge:hover {
+    transform: scale(1.05) translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Disabled Badge Styles */
+.badge-disabled {
+    opacity: 0.5;
+    filter: grayscale(1);
+    position: relative;
+}
+
+.badge-disabled::after {
+    content: '\f023'; /* FontAwesome lock icon */
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.7);
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    z-index: 2;
+    pointer-events: none;
+}
+
+.badge-disabled .badge-icon,
+.badge-disabled p {
+    filter: blur(1px);
+}
+
+.badge-disabled:hover {
+    transform: scale(1.02);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.badge-icon {
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    margin:0 auto;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.badge-modal-icon{
+    display:flex !important;
+    width:100% !important;
+}
+
+.badge-modal-icon i {
+    margin:0 auto !important;
+}
+
+.badge-icon i {
+    font-size: 1.8rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.badge p {
+    color:azure;
+    margin: 0;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-align: center;
+    line-height: 1.3;
+}
+
+/* All Badges Section */
+.all-badges-section {
+    margin-top: 3rem;
+}
+
+.all-badges-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.all-badges-section h3 {
+    color: var(--base-clr);
+    font-size: 1.5rem;
+    margin: 0;
+    text-align: center;
+}
+
+.all-badges-section h3 i{
+    color: #059669;
+}
+
+.toggle-btn {
+    background: linear-gradient(135deg, #059669, #047857);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(5, 150, 105, 0.3);
+}
+
+.toggle-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(5, 150, 105, 0.4);
+    background: linear-gradient(135deg, #047857, #065f46);
+}
+
+.toggle-btn i {
+    margin-left: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.all-badges-content {
+    overflow: hidden;
+    transition: all 0.5s ease;
+    max-height: 2000px; /* Increased for more badges */
+    opacity: 1;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.all-badges-content.hidden {
+    max-height: 0;
+    opacity: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/* Badge Category Filter */
+.badge-category-filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    justify-content: center;
+}
+
+.filter-btn {
+    background: #f8f9fa;
+    border: 2px solid #e9ecef;
+    color: #495057;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+    background: #e9ecef;
+    border-color: #059669;
+    color: #059669;
+}
+
+.filter-btn.active {
+    background: linear-gradient(135deg, #059669, #047857);
+    border-color: #059669;
+    color: white;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(5, 150, 105, 0.3);
+}
+
+/* Badge Item Container */
+.badge-item {
+    display: flex;
+    transition: all 0.3s ease;
+}
+
+.badge-item.hidden {
+    display: none !important;
+}
+
+.no-badges, .no-events {
+    text-align: center;
+    padding: 3rem 2rem;
+    color: #888;
+}
+
+.no-badges i, .no-events i {
+    font-size: 4rem;
+    color: #ddd;
+    margin-bottom: 1rem;
+}
+
+.no-badges p, .no-events p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+.cta-button {
+    display: inline-block;
+    background: linear-gradient(135deg, #2c5e3f, #4ecdc4);
+    color: white;
+    padding: 0.8rem 2rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(44, 94, 63, 0.3);
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(44, 94, 63, 0.4);
+    color: white;
+    text-decoration: none;
+}
+
+/* Events List */
+.events-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.events-list li {
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    border-left: 5px solid #2c5e3f;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.events-list li:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-left-color: #4ecdc4;
+}
+
+.event-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.event-info strong {
+    font-size: 1.2rem;
+    color: #2c5e3f;
+    margin-bottom: 0.5rem;
+}
+
+.event-date, .event-location {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.95rem;
+    color: #666;
+}
+
+.event-date i, .event-location i {
+    color: #4ecdc4;
+    width: 16px;
+}
+
+@media (max-width:800px){
+    header{
+        padding:1em 2em 1em 2em;
+    }
+    .navbar{
+        width:100%;
+        gap:15px;
+    }
+    .nav-list{
+        gap:15px;
+    }
+    .profile-icon{
+        width:45px;
+        height:45px;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .profile-container {
+        width: 95%;
+        margin: 1rem auto;
+    }
+
+    .profile-header {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem;
+    }
+
+    .profile-picture, .default-profile-picture {
+        margin-bottom: 1.5rem;
+        width: 120px;
+        height: 120px;
+    }
+
+    .profile-info {
+        margin-left: 0;
+        margin-bottom: 1.5rem;
+    }
+
+    .profile-info h1 {
+        font-size: 2.2rem;
+    }
+
+    .profile-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.8rem;
+    }
+
+    .stat {
+        min-width: 140px;
+        padding: 1rem 1.5rem;
+    }
+
+    .stat h2 {
+        font-size: 2rem;
+    }
+
+    .badges-grid {
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .badge-item,
+    .badge {
+        flex: 0 0 calc(33.333% - 0.67rem); /* 3 badges per row on tablet */
+        min-width: 120px;
+        max-width: 150px;
+    }
+
+    .badge {
+        padding: 1rem 0.5rem;
+    }
+
+    .badge-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .badge-icon i {
+        font-size: 1.5rem;
+    }
+
+    .event-info {
+        gap: 0.3rem;
+    }
+
+    .event-info strong {
+        font-size: 1.1rem;
+    }
+
+    .event-date, .event-location {
+        font-size: 0.9rem;
+    }
+
+    /* Toggle button responsive styles */
+    .all-badges-header {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .toggle-btn {
+        font-size: 0.8rem;
+        padding: 0.4rem 0.8rem;
+    }
+}
+/* Global box-sizing and overflow prevention */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+html, body {
+    overflow-x: hidden;
+}
+
+/* Additional adjustments for very small screens */
+@media (max-width: 480px) {
+    .profile-container {
+        width: 100%;
+        padding: 0 1rem;
+        margin: 1rem auto;
+    }
+
+    .profile-header {
+        padding: 1rem;
+    }
+
+    .profile-picture {
+        width: 100px;
+        height: 100px;
+    }
+
+    .profile-info h1 {
+        font-size: 1.5rem;
+    }
+
+    .profile-info p,
+    .stat p {
+        font-size: 0.9rem;
+    }
+
+    .stat h2 {
+        font-size: 1.8rem;
+    }
+
+    .badges-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        justify-content: center;
+    }
+
+    .badge-item,
+    .badge {
+        flex: 0 0 calc(50% - 0.375rem); /* 2 badges per row on mobile */
+        min-width: 120px;
+        max-width: none;
+    }
+
+    .badge img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .events-list li {
+        font-size: 0.8rem;
+        padding: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+}
+
+/* Additional Badge Container Fixes */
+.all-badges-section .badges-grid {
+    min-height: 200px; /* Minimum height to prevent jumping */
+}
+
+/* Ensure proper spacing when badges are filtered */
+.badges-grid::after {
+    content: '';
+    flex: auto;
+}
+
+/* Handle edge case for single badge in a row */
+@media (min-width: 769px) {
+    .badge-item:nth-last-child(1):nth-child(odd) {
+        margin-right: auto;
+    }
+}
+
+/* Smooth transitions for badge filtering */
+.badge-item {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.badge-item.hidden {
+    opacity: 0;
+    transform: scale(0.8);
+    margin: 0;
+    padding: 0;
+    min-width: 0;
+    max-width: 0;
+    overflow: hidden;
+}
+
+/* Container adjustments */
+#badgesContainer {
+    transition: all 0.3s ease;
+    width: 100%;
+    overflow: hidden;
+}

@@ -1,0 +1,43 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "area_no": "ABU-01",
+                "city_municipality": "Abucay",
+                "id": 1750569832478,
+                "area_m2": 2278432,
+                "date_created": "2025-06-22T05:23:52.000Z",
+                "date_updated": "2025-06-22T05:26:53.000Z"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            120.52141,
+                            14.729564
+                        ],
+                        [
+                            120.521753,
+                            14.717278
+                        ],
+                        [
+                            120.53884,
+                            14.718108
+                        ],
+                        [
+                            120.537638,
+                            14.728651
+                        ],
+                        [
+                            120.52141,
+                            14.729564
+                        ]
+                    ]
+                ]
+            }
+        }
+    ]
+}
